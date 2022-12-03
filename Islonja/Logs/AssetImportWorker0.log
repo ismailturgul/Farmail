@@ -224,3 +224,25 @@ Received Import Request.
   path: Assets/Sprites/Ground-Farmer-I-Smile2.png
   artifactKey: Guid(bf45beb142767614195840207060c323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Sprites/Ground-Farmer-I-Smile2.png using Guid(bf45beb142767614195840207060c323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4497284563622307ac7d362039727d4d') in 0.522562 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1597.337994 seconds.
+  path: Assets/Sprites/Smail-Back1.png
+  artifactKey: Guid(68546df8adbd7d345a985a786fb228b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Smail-Back1.png using Guid(68546df8adbd7d345a985a786fb228b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '837f1fff8e0619b88a4216d2ebfa9d05') in 0.013387 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.131907 seconds.
+  path: Assets/Sprites/Smail-Front (1)1.png
+  artifactKey: Guid(caed678d16a27ff43a3f0ffe28ea5bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Smail-Front (1)1.png using Guid(caed678d16a27ff43a3f0ffe28ea5bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f6966fa4635f507e6236120928e3fb2') in 0.012679 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprites/Smail-Back3.png
+  artifactKey: Guid(b00155b9ac53932408e7b6217f570365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Smail-Back3.png using Guid(b00155b9ac53932408e7b6217f570365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de868b2e90f7c53d5539233eaffd9da8') in 0.010173 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
