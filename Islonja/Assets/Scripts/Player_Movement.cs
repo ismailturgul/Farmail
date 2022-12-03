@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
+    public float speed;
 
-    float current_Position;
-        public float speed;
+    private void Update()
+    {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
 
-private void Update()
-    { }
+        Vector3 direction = new Vector3(horizontal, vertical);
+
+        transform.position += direction * speed * Time.deltaTime;
+    }
 
 }
 
