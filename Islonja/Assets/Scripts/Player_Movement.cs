@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_Movement : MonoBehaviour
 {
     public float speed;
+    public Animator animator;
 
     private void Update()
     {
@@ -13,8 +14,25 @@ public class Player_Movement : MonoBehaviour
 
         Vector3 direction = new Vector3(horizontal, vertical);
 
+        AnimateMovement(direction);
         transform.position += direction * speed * Time.deltaTime;
     }
 
+    void AnimateMovement(Vector3 direction)
+    {
+        if(animator != null)
+        {
+            if(direction.magnitude> 0)
+            {
+                animator.SetBool("isMoving", true);
+                animator.SetFloat("horizontal", direction.x);
+                animator.SetFloat("vertival", direction.y);
+            }
+            else
+            {
+                animator.SetBool("isMoving", false);
+            }
+        }
+    }
 }
 
