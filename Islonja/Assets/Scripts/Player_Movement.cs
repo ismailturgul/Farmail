@@ -22,7 +22,7 @@ public class Player_Movement : MonoBehaviour
     {
         if(animator != null)
         {
-            if(direction.magnitude> 0)
+            if(direction.magnitude > 0)
             {
                 animator.SetBool("isMoving", true);
                 animator.SetFloat("horizontal", direction.x);
