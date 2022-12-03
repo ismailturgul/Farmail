@@ -26,7 +26,7 @@ public class Player_Movement : MonoBehaviour
             {
                 animator.SetBool("isMoving", true);
                 animator.SetFloat("horizontal", direction.x);
-                animator.SetFloat("vertival", direction.y);
+                animator.SetFloat("vertical", direction.y);
             }
             else
             {
