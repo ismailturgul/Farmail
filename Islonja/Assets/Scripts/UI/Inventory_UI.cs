@@ -51,4 +51,11 @@ public class Inventory_UI : MonoBehaviour
             }
         }
     }
+
+    public void Remove(int slotID)
+    {
+        player.inventory.Remove(slotID);
+
+        Refresh();
+    }
 }

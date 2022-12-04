@@ -20,6 +20,6 @@ public class Collectable : MonoBehaviour
 
     public enum CollectableType
     {
-        None, CARROT_SEED
+        None, CARROT_SEED,APPLE_SEED
     }
 }
