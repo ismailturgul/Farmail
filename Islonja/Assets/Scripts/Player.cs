@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
             if(GameManager.instance.tileManager.IsInteractable(position))
             {
                 Debug.Log("Tile is interacable");
+                GameManager.instance.tileManager.SetInteracted(position);
             }
         }
     }

@@ -7,6 +7,7 @@ public class TileManager : MonoBehaviour
 {
     [SerializeField] private Tilemap interactableMap;
     [SerializeField] private Tile hiddenInteractableTile;
+    [SerializeField] private Tile interactedTile;
 
     void Start()
     {
@@ -29,5 +30,10 @@ public class TileManager : MonoBehaviour
 
         }
             return false;
+    }
+
+    public void SetInteracted(Vector3Int position)
+    {
+        interactableMap.SetTile(position, interactedTile);
     }
 }
