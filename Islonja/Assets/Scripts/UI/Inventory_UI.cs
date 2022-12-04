@@ -26,7 +26,7 @@ public class Inventory_UI : MonoBehaviour
         if(!inventoryPanel.activeSelf)
         {
             inventoryPanel.SetActive(true);
-            Setup();
+            Refresh();
         }
         else
         {
@@ -34,7 +34,7 @@ public class Inventory_UI : MonoBehaviour
         }
     }
 
-     void Setup()
+     void Refresh()
     {
         if(slots.Count == player.inventory.slots.Count)
         {
