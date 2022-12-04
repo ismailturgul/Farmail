@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
+    public CollectableType type;
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
@@ -14,5 +15,10 @@ public class Collectable : MonoBehaviour
             player.numCarrotSeed++;
             Destroy(this.gameObject);
         }
+    }
+
+    public enum CollectableType
+    {
+        None, CARROT_SEED
     }
 }
