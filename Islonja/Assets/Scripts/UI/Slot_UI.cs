@@ -8,7 +8,7 @@ using Newtonsoft.Json.Bson;
 public class Slot_UI : MonoBehaviour
 {
     public Image itemIcon;
-    public TextMeshPro quantityText;
+    public TextMeshProUGUI quantityText;
 
 
     public void SetItem(Inventory.Slot slot)
