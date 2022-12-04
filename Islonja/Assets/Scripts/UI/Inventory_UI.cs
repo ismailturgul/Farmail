@@ -18,7 +18,7 @@ public class Inventory_UI : MonoBehaviour
 
     public void ToggleInventory()
     {
-        if(inventoryPanel.activeSelf)
+        if(!inventoryPanel.activeSelf)
         {
             inventoryPanel.SetActive(true);
         }
