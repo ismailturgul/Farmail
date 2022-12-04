@@ -11,7 +11,8 @@ public class Collectable : MonoBehaviour
     
         if (player) 
         {
-        
+            player.numCarrotSeed++;
+            Destroy(this.gameObject);
         }
     }
 }
