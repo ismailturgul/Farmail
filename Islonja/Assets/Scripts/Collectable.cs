@@ -12,7 +12,7 @@ public class Collectable : MonoBehaviour
     
         if (player) 
         {
-            player.numCarrotSeed++;
+            player.inventory.Add(type);
             Destroy(this.gameObject);
         }
     }
