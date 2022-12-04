@@ -8,6 +8,8 @@ public class Inventory_UI : MonoBehaviour
 
     public GameObject inventoryPanel;
 
+    public Player player;
+
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Tab))
@@ -21,6 +23,7 @@ public class Inventory_UI : MonoBehaviour
         if(!inventoryPanel.activeSelf)
         {
             inventoryPanel.SetActive(true);
+            Setup();
         }
         else
         {
