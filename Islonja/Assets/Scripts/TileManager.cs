@@ -11,9 +11,15 @@ public class TileManager : MonoBehaviour
 
     void Start()
     {
+        // this changes every visible tile to a hidden
         foreach(var position in interactableMap.cellBounds.allPositionsWithin)
         {
-            interactableMap.SetTile(position, hiddenInteractableTile);
+            TileBase tile = interactableMap.GetTile(position);
+
+            if (tile != null && tile.name == "Interactable_Visiable") 
+            {
+            interactableMap.SetTile(position, hiddenInteractableTile); // this line, without the if converts the whole grid to a interactable 
+            }
         }
     }
 
