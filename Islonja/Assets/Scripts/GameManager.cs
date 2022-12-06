@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,13 +12,14 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        
         if(instance != null && instance != this)
         {
             Destroy(this.gameObject);
         }
         else
         {
-            instance= this;
+            instance = this;
         }
 
         DontDestroyOnLoad(this.gameObject);
@@ -25,4 +27,5 @@ public class GameManager : MonoBehaviour
         itemManager = GetComponent<ItemManager>();
         tileManager = GetComponent<TileManager>();
     }
+        public GameObject player;
 }

@@ -20,6 +20,7 @@ public class Collectable : MonoBehaviour
     
         if (player) 
         {
+
             player.inventory.Add(this);
             Destroy(this.gameObject);
         }

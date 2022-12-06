@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3773044064281569833}
   - component: {fileID: 3773044064281569834}
   - component: {fileID: 3773044064281569835}
+  - component: {fileID: 7229772256699147337}
   - component: {fileID: -2395075325682547365}
   m_Layer: 0
   m_Name: Carrot-Planted
@@ -118,6 +119,21 @@ MonoBehaviour:
   type: 1
   icon: {fileID: -211812334, guid: 98b8c886fc233ec4b92225fb67664fc0, type: 3}
   rb2d: {fileID: -2395075325682547365}
+--- !u!114 &7229772256699147337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773044064281569812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2fa00cd3b31ce44916efb0b57add3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  pickUpDistance: 1.5
+  ttl: 10
 --- !u!50 &-2395075325682547365
 Rigidbody2D:
   serializedVersion: 4

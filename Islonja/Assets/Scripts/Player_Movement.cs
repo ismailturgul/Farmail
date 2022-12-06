@@ -42,7 +42,7 @@ public class Player_Movement : MonoBehaviour
     
     void Move()
     {
-        rigidbody2D.velocity = direction * speed * Time.deltaTime;
+        rigidbody2D.velocity = direction * speed;
     }
 
     public void AnimateMovement(Vector2 direction)
