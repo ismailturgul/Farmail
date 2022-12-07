@@ -20,6 +20,8 @@ public class treeCutable : ToolHits
 
             GameObject go = Instantiate(pickUpDrop);
             go.transform.position = position;
+
+
         }
 
         Destroy(gameObject);
