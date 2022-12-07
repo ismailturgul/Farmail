@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class Character_Interact_Controller : MonoBehaviour
     [SerializeField] float offsetDistance = 1.0f;
     [SerializeField] float sizeOfInteractableArea = 1.2f;
     Character character;
+    [SerializeReference] Highlight_Controller highlight_Controller;
 
     private void Awake()
     {
@@ -19,11 +21,35 @@ public class Character_Interact_Controller : MonoBehaviour
 
     private void Update()
     {
+        Check();
         if (Input.GetMouseButton(1))
         {
             Debug.Log("Interactable");
             Interact();
         }
+    }
+
+    private void Check()
+    {
+        Vector2 position = rgbd2d.position + character_Controller.lastDirection * offsetDistance;
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, sizeOfInteractableArea);
+        
+        foreach (Collider2D c in colliders)
+        {
+            Interactable hit = c.GetComponent<Interactable>();
+            if (hit != null)
+            {
+                highlight_Controller.Highlight(hit.gameObject);
+                return;
+            }
+        }
+        if (colliders.Length > 0)
+        {
+        highlight_Controller.Hide();
+
+        }
+        
     }
 
     private void Interact()
