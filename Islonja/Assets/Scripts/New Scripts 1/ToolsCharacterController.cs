@@ -2,9 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class ToolsCharacterController : MonoBehaviour
 {
+
     CharacterController2D character;
     Rigidbody2D rgbd2d;
     [SerializeField] float offsetDistance = 1.0f;
@@ -26,7 +26,7 @@ public class ToolsCharacterController : MonoBehaviour
 
     private void UseTool()
     {
-       Vector2 position = rgbd2d.position + character.direction * offsetDistance;
+       Vector2 position = rgbd2d.position + character.lastDirection * offsetDistance;
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(position, sizeOfInteractableArea);
         
@@ -40,4 +40,5 @@ public class ToolsCharacterController : MonoBehaviour
             }
         }
     }
+
 }

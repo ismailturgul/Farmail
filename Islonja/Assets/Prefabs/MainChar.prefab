@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5898719315015891912}
   - component: {fileID: 5898719315015891913}
   - component: {fileID: 5898719315015891914}
-  - component: {fileID: 5898719315015891917}
   - component: {fileID: 5898719315015891915}
   - component: {fileID: 5898719315015891918}
+  - component: {fileID: 5898719315015891917}
   - component: {fileID: 5898719315015891919}
   m_Layer: 0
   m_Name: MainChar
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5898719315015891767}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ea6108fee330a74b883e347d9a77c4f, type: 3}
   m_Name: 
@@ -80,20 +80,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5694824, y: 0.5740204}
   m_EdgeRadius: 0
---- !u!114 &5898719315015891917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5898719315015891767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d5812b129440e0468dc712ff12a7cc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offsetDistance: 1
-  sizeOfInteractableArea: 1.2
 --- !u!50 &5898719315015891915
 Rigidbody2D:
   serializedVersion: 4
@@ -135,6 +121,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5898719315015891917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5898719315015891767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5812b129440e0468dc712ff12a7cc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetDistance: 1
+  sizeOfInteractableArea: 1.2
 --- !u!212 &5898719315015891919
 SpriteRenderer:
   m_ObjectHideFlags: 0
