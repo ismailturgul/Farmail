@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6348402844643558421}
   - component: {fileID: 6348402844643558418}
   - component: {fileID: 6348402844643558419}
+  - component: {fileID: 1788510639}
   m_Layer: 0
   m_Name: TreeNL1
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 2be5cb337b9892e4195c6d3b1c2a960b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -111,3 +112,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.39691734, y: 0.43273163}
   m_EdgeRadius: 0
+--- !u!114 &1788510639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6348402844643558416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80db7725bfe964d43be8c1d1a903b8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUpDrop: {fileID: 8106247512002197578, guid: 850f93db47966b148b4d9d62c0fcbb14, type: 3}
+  dropCount: 5
+  spread: 0.7

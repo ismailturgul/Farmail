@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8106247512002197581}
   - component: {fileID: 8106247512002197580}
-  - component: {fileID: 8106247512002197579}
-  - component: {fileID: -5335432418164989231}
   - component: {fileID: 6038527217009491950}
   m_Layer: 0
   m_Name: Apple
@@ -28,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8106247512002197578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -970.96686, y: -206.22104, z: 4.507755}
+  m_LocalPosition: {x: -970.96686, y: -206.22104, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87,43 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8106247512002197579
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8106247512002197578}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.013842106, y: 0.023070335}
-  serializedVersion: 2
-  m_Radius: 0.16609049
---- !u!50 &-5335432418164989231
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8106247512002197578}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 3
-  m_LinearDrag: 0.2
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &6038527217009491950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2fa00cd3b31ce44916efb0b57add3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  pickUpDistance: 1.5
+  speed: 2.5
+  pickUpDistance: 1.6
   ttl: 10

@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class ToolsCharacterController : MonoBehaviour
 {
-    Player_Movement character;
+    CharacterController2D character;
     Rigidbody2D rgbd2d;
     [SerializeField] float offsetDistance = 1.0f;
     [SerializeField] float sizeOfInteractableArea = 1.2f;
 
     private void Awake()
     {
-        character = GetComponent<Player_Movement>();
+        character = GetComponent<CharacterController2D>();
         rgbd2d= GetComponent<Rigidbody2D>();
     }
 
