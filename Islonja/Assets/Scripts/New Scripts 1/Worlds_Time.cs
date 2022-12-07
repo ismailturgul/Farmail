@@ -7,6 +7,7 @@ namespace World_Time
 {
     public class Worlds_Time : MonoBehaviour
     {
+        public event EventHandler<TimeSpan> WorldTimeChanged;
         [SerializeField]
         private float day_Length; // in sec.
 
@@ -21,6 +22,7 @@ namespace World_Time
         private IEnumerator AddMinute()
         {
             current_Time += TimeSpan.FromMinutes(1);
+            WorldTimeChanged?.Invoke(this, current_Time);
             yield return new WaitForSeconds(Minute_length);
             StartCoroutine(AddMinute());
         }

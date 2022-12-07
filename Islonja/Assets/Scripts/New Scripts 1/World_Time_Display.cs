@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -15,6 +16,17 @@ namespace World_Time
         private void Awake()
         {
             world_text = GetComponent<TMP_Text>();
+            world_Time.WorldTimeChanged += OnWorldTimeChanged;
+        }
+
+        private void OnDestroy()
+        {
+            world_Time.WorldTimeChanged -= OnWorldTimeChanged;
+        }
+
+        private void OnWorldTimeChanged(object sender, TimeSpan newTime)
+        {
+            world_text.SetText(newTime.ToString(@"hh\:mm"));
         }
     }
 
