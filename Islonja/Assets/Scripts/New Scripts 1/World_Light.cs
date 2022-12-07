@@ -1,18 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using System.IO.Pipes;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
-public class World_Light : MonoBehaviour
+namespace World_Time
 {
-    // Start is called before the first frame update
-    void Start()
+    [RequireComponent(typeof(Light2D))]
+    public class World_Light : MonoBehaviour
     {
-        
-    }
+        private Light2D light;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField]
+        private Worlds_Time world_Time;
+
+        [SerializeField]
+        private Gradient gradient;
+
+        private void Awake()
+        {
+            light = GetComponent<Light2D>();
+            world_Time.WorldTimeChanged += OnWorldTimeChanged;
+        }
+
+        private void OnDestroy()
+        {
+            world_Time.WorldTimeChanged -= OnWorldTimeChanged;
+
+        }
+
+        private void OnWorldTimeChanged(object sender, TimeSpan newTime)
+        {
+            light.color = gradient.Evaluate(PercentOfDay(newTime));
+        }
+
+        private float PercentOfDay(TimeSpan timeSpan)
+        {
+            return (float)timeSpan.TotalMinutes % World_Time_Constats.MinutsInDay / World_Time_Constats.MinutsInDay;
+        }
     }
 }
+
