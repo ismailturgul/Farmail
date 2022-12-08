@@ -12,7 +12,6 @@ namespace World_Time
     {
         [SerializeField]
         private Worlds_Time world_Time;
-        string[] day_Of_The_Weeks = { "Monday", "tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
         private TMP_Text world_text;
 
         private void Awake()
@@ -28,7 +27,7 @@ namespace World_Time
 
         private void OnWorldTimeChanged(object sender, TimeSpan newTime)
         {
-            world_text.SetText(newTime.ToString(@"d.Tag\hh\:mm"));
+            world_text.SetText(newTime.ToString(@"hh\:mm"));
 
         }
     }
