@@ -5,7 +5,11 @@
     "m_Properties": [],
     "m_Keywords": [],
     "m_Dropdowns": [],
-    "m_CategoryData": [],
+    "m_CategoryData": [
+        {
+            "m_Id": "c1c742327a9d48f1be9d19c86d60eb9a"
+        }
+    ],
     "m_Nodes": [
         {
             "m_Id": "f99936cc402d4d998a80630dcc29fce7"
@@ -40,8 +44,8 @@
     "m_Edges": [],
     "m_VertexContext": {
         "m_Position": {
-            "x": 0.0,
-            "y": 0.0
+            "x": -0.00002002716064453125,
+            "y": 2.000001907348633
         },
         "m_Blocks": [
             {
@@ -57,8 +61,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 0.0,
-            "y": 200.0
+            "x": -0.00002002716064453125,
+            "y": 202.0
         },
         "m_Blocks": [
             {
@@ -483,6 +487,14 @@
     },
     "m_Labels": [],
     "m_Space": 0
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "c1c742327a9d48f1be9d19c86d60eb9a",
+    "m_Name": "",
+    "m_ChildObjectList": []
 }
 
 {
