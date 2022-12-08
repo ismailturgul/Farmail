@@ -13,14 +13,11 @@ namespace World_Time
         [SerializeField]
         private Worlds_Time world_Time;
         string[] day_Of_The_Weeks = { "Monday", "tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
-
         private TMP_Text world_text;
-        private TMP_Text day_text;
 
         private void Awake()
         {
             world_text = GetComponent<TMP_Text>();
-            day_text= GetComponent<TMP_Text>();
             world_Time.WorldTimeChanged += OnWorldTimeChanged;
         }
 
@@ -32,17 +29,7 @@ namespace World_Time
         private void OnWorldTimeChanged(object sender, TimeSpan newTime)
         {
             world_text.SetText(newTime.ToString(@"d.Tag\hh\:mm"));
-            StartCoroutine(AddDay());
-        }
 
-        private IEnumerator AddDay()
-        {
-            yield return new WaitForSeconds(10f);
-            
-            for(int i = 0; i < day_Of_The_Weeks.Length; i++)
-            {
-                day_text.SetText(day_Of_The_Weeks[i]);
-            }
         }
     }
 

@@ -1,7 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace World_Time
@@ -12,7 +10,6 @@ namespace World_Time
         public event EventHandler<TimeSpan> WorldTimeChanged;
         [SerializeField]
         private float day_Length; // in sec.
-        
         private TimeSpan current_Time;
 
         private float Minute_length => day_Length / World_Time_Constats.MinutsInDay;  //declares a min.
