@@ -14,7 +14,7 @@ public class Day_Time_Controller : MonoBehaviour
     [SerializeField] Color day_Light_Color = Color.white;
             [SerializeField]
         private Gradient gradient;
-    float time;
+    float time = 6f;
     [SerializeField] float time_Scale = 60f;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] Light2D global_Lights;
