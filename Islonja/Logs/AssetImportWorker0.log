@@ -683,3 +683,154 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015946 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\i-tur\Documents\GitHub\Farmail\Islonja\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\i-tur\Documents\GitHub\Farmail\Islonja\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.47 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.652 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1653ms)
+		BeginReloadAssembly (169ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1335ms)
+			LoadAssemblies (163ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (400ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (86ms)
+			SetupLoadedEditorAssemblies (627ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (17ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (114ms)
+				ProcessInitializeOnLoadAttributes (373ms)
+				ProcessInitializeOnLoadMethodAttributes (111ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.89 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5577 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 48 unused Assets / (0.8 MB). Loaded Objects now: 6351.
+Memory consumption went from 214.6 MB to 213.8 MB.
+Total: 4.812000 ms (FindLiveObjects: 0.511500 ms CreateObjectMapping: 0.202200 ms MarkObjects: 3.660000 ms  DeleteObjects: 0.437000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1415.128913 seconds.
+  path: Assets/Items/Stick.asset
+  artifactKey: Guid(8dedee0cfa18ca847a1750477b98728a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Items/Stick.asset using Guid(8dedee0cfa18ca847a1750477b98728a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a3682065bc02ee9e7eb6e38f18ba42b') in 0.022729 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.375462 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_0.asset
+  artifactKey: Guid(7f141e1240e2e954ab726256fb1e785f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_0.asset using Guid(7f141e1240e2e954ab726256fb1e785f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f6328fa0ee2c889c0868611d76124b3') in 0.045800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.110380 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_3.asset
+  artifactKey: Guid(63ff4540ca8c2974f8ad949e92277df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_3.asset using Guid(63ff4540ca8c2974f8ad949e92277df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a34fc48962d6e24834f4e7314f3360a') in 0.013939 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_12.asset
+  artifactKey: Guid(a74ab8855fc259441b3269f58a26775e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_12.asset using Guid(a74ab8855fc259441b3269f58a26775e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb4030e2f9aa76fc18a026e472a65b8c') in 0.011444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_26.asset
+  artifactKey: Guid(c28c9f4a595eef143826e5c6ef965914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_26.asset using Guid(c28c9f4a595eef143826e5c6ef965914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ed4714615ffeecc20d1c8cd6e101e42') in 0.012394 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_22.asset
+  artifactKey: Guid(daf406fc1d76e8f4db9a5deb25d2fc80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_22.asset using Guid(daf406fc1d76e8f4db9a5deb25d2fc80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a79682c4a84933ec41cacc978f4b4136') in 0.012271 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_18.asset
+  artifactKey: Guid(493ea960d2dcf0a409211435aaf2fb23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_18.asset using Guid(493ea960d2dcf0a409211435aaf2fb23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '809b0295d155bf8f5d62db00e74ed9e9') in 0.012296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_25.asset
+  artifactKey: Guid(e405195e20e4318499801c6070b72601) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_25.asset using Guid(e405195e20e4318499801c6070b72601) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f984d36649ef3a64f06e1d3371e71378') in 0.012937 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_23.asset
+  artifactKey: Guid(5a4d96079e9dc8a418d21d0a275b41af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_23.asset using Guid(5a4d96079e9dc8a418d21d0a275b41af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f69994d2ad158e5e6f87e65b3e551d6a') in 0.012458 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_10.asset
+  artifactKey: Guid(9c84c8964a542c546a7dc0b62ed1e5fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_10.asset using Guid(9c84c8964a542c546a7dc0b62ed1e5fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24f06fd4d422bbd8166d856a3af8a1f7') in 0.013785 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_11.asset
+  artifactKey: Guid(542137cbed786384c9d5a7989cf543a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_11.asset using Guid(542137cbed786384c9d5a7989cf543a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a02e2469611542ba6215c1cf515140d1') in 0.011894 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_16.asset
+  artifactKey: Guid(e1542081cf390f0498891fcdfb194045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_16.asset using Guid(e1542081cf390f0498891fcdfb194045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd103710735cfc1a11db24c5fd494dc1b') in 0.010599 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_15.asset
+  artifactKey: Guid(41330d6ab12d79145a0285ea01981ceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_15.asset using Guid(41330d6ab12d79145a0285ea01981ceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaa3c3bf8ec6d5f275bf550b125b778b') in 0.011559 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_24.asset
+  artifactKey: Guid(f6e22d7b2d6e2dd43baab9549cd7d7cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_24.asset using Guid(f6e22d7b2d6e2dd43baab9549cd7d7cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90ba3ad026ba97e36af8a03d97f529f0') in 0.011716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Ground_Tiles/Gras-Dirt-Water_9.asset
+  artifactKey: Guid(95f9660035d7668409e87444e80cc989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground_Tiles/Gras-Dirt-Water_9.asset using Guid(95f9660035d7668409e87444e80cc989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73d1074e33b3704fc9daf218846d30da') in 0.010336 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
