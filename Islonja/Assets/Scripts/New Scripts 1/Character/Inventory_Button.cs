@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using Newtonsoft.Json.Bson;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,6 +13,7 @@ public class Inventory_Button : MonoBehaviour, IPointerClickHandler
 
     [SerializeField] Image icon;
     [SerializeField] TextMeshProUGUI text;
+    [SerializeField] Image highlight;
 
     int my_Index;
 
@@ -44,8 +46,12 @@ public class Inventory_Button : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        ItemContainer inventory = GameManager.instance.inventoryContainer;
-        GameManager.instance.dragAndDropController.OnClick(inventory.slots[my_Index]);
-        transform.parent.GetComponent<Inventory_Panel>().Show();
+        ItemPanel itemPanel = transform.parent.GetComponent<ItemPanel>();
+        itemPanel.OnClick(my_Index);
+    }
+
+    public void Highlight(bool b)
+    {
+        highlight.gameObject.SetActive(b);
     }
 }

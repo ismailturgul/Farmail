@@ -3,43 +3,11 @@ using System.Collections.Generic;
 using UnityEditor.Search;
 using UnityEngine;
 
-public class Inventory_Panel : MonoBehaviour
+public class Inventory_Panel : ItemPanel
 {
-
-    [SerializeField] ItemContainer inventory;
-    [SerializeField] List<Inventory_Button> buttons;
-
-    private void Start()
+    public override void OnClick(int id)
     {
-        Set_Index();
+        GameManager.instance.dragAndDropController.OnClick(inventory.slots[id]);
         Show();
-
-    }
-
-    private void OnEnable()
-    {
-        Show();
-    }
-    private void Set_Index()
-    {
-        for (int i = 0; i < inventory.slots.Count; i++)
-        {
-            buttons[i].Set_Index(i);
-        }
-    }
-
-    public void Show()
-    {
-        for(int i = 0; i < inventory.slots.Count; i++)
-        {
-            if (inventory.slots[i].item == null)
-            {
-                buttons[i].Clean(); 
-            }
-            else
-            {
-                buttons[i].Set(inventory.slots[i]);
-            }
-        }
     }
 }

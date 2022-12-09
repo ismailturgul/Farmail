@@ -153,11 +153,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_RootOrder
@@ -276,7 +276,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 921305040}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -330,11 +330,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_RootOrder
@@ -606,6 +606,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1527616009}
+--- !u!114 &199506071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199506047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f31c594f9c72cd42b79f3b2ee73aa3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolbarSize: 12
 --- !u!1001 &213749317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2562,11 +2575,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_RootOrder
@@ -3381,11 +3394,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_RootOrder
@@ -3885,11 +3898,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_RootOrder
@@ -3986,11 +3999,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_RootOrder
@@ -4611,9 +4624,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1183954540}
   - {fileID: 1527616010}
   - {fileID: 59800741}
-  - {fileID: 1183954540}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4829,11 +4842,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_RootOrder
@@ -5245,13 +5258,13 @@ RectTransform:
   - {fileID: 1886914971}
   - {fileID: 622782884}
   m_Father: {fileID: 921305040}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -23.5901, y: 25}
+  m_AnchoredPosition: {x: -23.5901, y: 24.5}
   m_SizeDelta: {x: 528.8198, y: 48}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1183954541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5323,7 +5336,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1183954539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4bdb0e12a4ec46428c6c0491540214b, type: 3}
+  m_Script: {fileID: 11500000, guid: 56e638b5f4f667a4a9a1d263c51b64e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: e8e9d3f459a4d434ebb849b5e7802bbb, type: 2}
@@ -5339,6 +5352,7 @@ MonoBehaviour:
   - {fileID: 954312084}
   - {fileID: 1886914972}
   - {fileID: 622782885}
+  toolbarController: {fileID: 199506071}
 --- !u!224 &1185843316 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
@@ -5493,11 +5507,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_RootOrder
@@ -6412,11 +6426,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_RootOrder
@@ -45658,7 +45672,7 @@ RectTransform:
   - {fileID: 1240971704}
   - {fileID: 1727620549}
   m_Father: {fileID: 921305040}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -46044,11 +46058,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_RootOrder
@@ -48818,11 +48832,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
       propertyPath: m_RootOrder
