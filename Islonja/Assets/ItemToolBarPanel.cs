@@ -10,6 +10,7 @@ public class ItemToolBarPanel : ItemPanel
     {
         Init();
         toolbarController.onChange += Highlight;
+        Highlight(0);
     }
 
     public override void OnClick(int id)

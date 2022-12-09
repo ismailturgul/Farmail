@@ -606,6 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1527616009}
+  toolbarPanel: {fileID: 1183954539}
 --- !u!114 &199506071
 MonoBehaviour:
   m_ObjectHideFlags: 0

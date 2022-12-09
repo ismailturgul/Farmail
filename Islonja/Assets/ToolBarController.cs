@@ -10,6 +10,10 @@ public class ToolBarController : MonoBehaviour
 
     public Action<int> onChange;
 
+    internal void Set(int id)
+    {
+        selectedTool = id;
+    }
 
     private void Update()
     {
@@ -24,14 +28,9 @@ public class ToolBarController : MonoBehaviour
             else
             {
                 selectedTool -= 1;
-                selectedTool = (selectedTool <= 0 ? toolbarSize - 1 : selectedTool);
+                selectedTool = (selectedTool < 0 ? toolbarSize - 1 : selectedTool);
             }
             onChange?.Invoke(selectedTool);
         }
     }
-    internal void Set(int id)
-    {
-        selectedTool = id;
-    }
-
 }
