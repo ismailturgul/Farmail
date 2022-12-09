@@ -22,11 +22,11 @@ public class ItemContainer : ScriptableObject
             ItemSlot itemSlot = slots.Find(x => x.item == item);
             if(itemSlot != null)
             {
-                itemSlot.count += count; ;
+                itemSlot.count += count;
             }
             else
             {
-                itemSlot = slots.Find(x => x.item == null);
+                 itemSlot = slots.Find(x => x.item == null);
                 if(itemSlot != null)
                 {
                     itemSlot.item = item;
@@ -38,7 +38,7 @@ public class ItemContainer : ScriptableObject
         {
             // add non stackable item to our item container
             ItemSlot itemSlot = slots.Find(x => x.item == null);
-            if(itemSlot == null)
+            if(itemSlot != null)
             {
                 itemSlot.item = item;
             }

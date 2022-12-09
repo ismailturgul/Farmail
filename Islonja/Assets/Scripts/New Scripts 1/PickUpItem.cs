@@ -11,7 +11,7 @@ public class PickUpItem : MonoBehaviour
 
     public Item item;
     public int count = 1;
-    private void Awake()
+    private void Start()
     {
         player = GameManager.instance.player.transform;
     }
@@ -41,15 +41,12 @@ public class PickUpItem : MonoBehaviour
             if(GameManager.instance.inventoryContainer != null)
             {
                 GameManager.instance.inventoryContainer.Add(item,count);
-
             }
             else
             {
                 Debug.LogWarning("No Inventory container attached to the game Manager");
             }
-
             Destroy(gameObject);
         }
     }
-
 }
