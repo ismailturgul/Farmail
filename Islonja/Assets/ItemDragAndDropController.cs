@@ -37,6 +37,9 @@ public class ItemDragAndDropController : MonoBehaviour
                         itemSlot.item,
                         itemSlot.count
                         );
+
+                    itemSlot.Clear();
+                    itemIcon.SetActive(false); //to hide the object
                 }
             }
         }
