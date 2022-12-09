@@ -48700,6 +48700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 199506047}
+  inventoryContainer: {fileID: 11400000, guid: e8e9d3f459a4d434ebb849b5e7802bbb, type: 2}
 --- !u!4 &1841313369
 Transform:
   m_ObjectHideFlags: 0
