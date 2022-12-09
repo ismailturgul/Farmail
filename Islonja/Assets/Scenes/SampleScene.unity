@@ -434,6 +434,19 @@ MonoBehaviour:
   offsetDistance: 2
   sizeOfInteractableArea: 2
   highlight_Controller: {fileID: 1841313370}
+--- !u!114 &199506064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199506047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1e3914aeb670d4ab61c1006dca245d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 921305036}
 --- !u!1001 &213749317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46559,7 +46572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4bdb0e12a4ec46428c6c0491540214b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
+  inventory: {fileID: 11400000, guid: e8e9d3f459a4d434ebb849b5e7802bbb, type: 2}
   buttons:
   - {fileID: 3788222353873010438}
   - {fileID: 1107253779}
