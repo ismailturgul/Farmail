@@ -8,3 +8,4 @@ public class Item : ScriptableObject
     public bool stackable;
     public Sprite icon;
 }
+
