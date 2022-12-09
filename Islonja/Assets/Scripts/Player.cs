@@ -6,13 +6,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     
-    public Inventory inventory;
-
-    private void Awake()
-    {
-        inventory = new Inventory(18);
-    }
-
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space)) 
@@ -27,7 +20,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void DropItem(Collectable item)
+    /*public void DropItem(Collectable item)
     {
         Vector2 spawnLocation = transform.position;
         Vector2 spawnOffset = Random.insideUnitCircle * 1.25f;
@@ -35,5 +28,5 @@ public class Player : MonoBehaviour
         Collectable droppedItem = Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
 
       //  droppedItem.rb2d.AddForce(spawnOffset * 1f, ForceMode2D.Impulse);
-    }
+    }*/
 }

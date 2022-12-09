@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Carrot
   m_EditorClassIdentifier: 
   Name: Carrot_Seed
-  stackable: 0
+  stackable: 1
   icon: {fileID: -211812334, guid: 98b8c886fc233ec4b92225fb67664fc0, type: 3}

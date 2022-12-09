@@ -8,7 +8,7 @@ namespace World_Time
     [RequireComponent(typeof(Light2D))]
     public class World_Light : MonoBehaviour
     {
-        private Light2D light;
+       private Light2D light2d;
 
         [SerializeField]
         private Worlds_Time world_Time;
@@ -18,7 +18,7 @@ namespace World_Time
 
         private void Awake()
         {
-            light = GetComponent<Light2D>();
+            light2d = GetComponent<Light2D>();
             world_Time.WorldTimeChanged += OnWorldTimeChanged;
         }
 
@@ -30,7 +30,7 @@ namespace World_Time
 
         private void OnWorldTimeChanged(object sender, TimeSpan newTime)
         {
-            light.color = gradient.Evaluate(PercentOfDay(newTime));
+            light2d.color = gradient.Evaluate(PercentOfDay(newTime));
         }
 
         private float PercentOfDay(TimeSpan timeSpan)

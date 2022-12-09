@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Apple
   m_EditorClassIdentifier: 
   Name: apple
-  stackable: 0
+  stackable: 1
   icon: {fileID: 21300000, guid: 9ec94bc149344f147bded37259ee21ef, type: 3}
