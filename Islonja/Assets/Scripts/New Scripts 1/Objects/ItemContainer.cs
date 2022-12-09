@@ -16,6 +16,11 @@ public class ItemSlot
         count = slot.count;
     }
 
+    public void Set(Item item, int count)
+    {
+        this.item = item;
+        this.count = count;
+    }
     public void Clear()
     {
         item = null;
