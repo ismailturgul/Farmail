@@ -16,13 +16,13 @@ public class PickUpItem : MonoBehaviour
 
     private void Update()
     {
-
+        /*   time to destroy
         ttl -= Time.deltaTime;
         if (ttl <= 0)
         {
             Destroy(gameObject);
         }
-
+        */
         float distance = Vector3.Distance(transform.position, player.position);
         if(distance > pickUpDistance)
         {
