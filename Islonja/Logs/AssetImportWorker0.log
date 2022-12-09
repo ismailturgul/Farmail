@@ -182,3 +182,7 @@ Received Import Request.
   path: Assets/Prefabs/Apple.prefab
   artifactKey: Guid(850f93db47966b148b4d9d62c0fcbb14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Prefabs/Apple.prefab using Guid(850f93db47966b148b4d9d62c0fcbb14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27a59711dd1f88b6bd83661c7cbaf054') in 0.018514 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
