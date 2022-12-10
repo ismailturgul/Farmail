@@ -9,6 +9,12 @@ public class ToolsCharacterController : MonoBehaviour
     Rigidbody2D rgbd2d;
     [SerializeField] float offsetDistance = 1.0f;
     [SerializeField] float sizeOfInteractableArea = 1.2f;
+    [SerializeField] MarkerManager markerManager;
+    [SerializeField] TileMapReadController tileMapReadController;
+    [SerializeField] float maxDistance = 1.5f;
+
+    Vector3Int selectedTilePosition;
+    bool selectables;
 
     private void Awake()
     {
@@ -18,10 +24,32 @@ public class ToolsCharacterController : MonoBehaviour
 
     private void Update()
     {
+        SelectTile();
+        Marker();
         if ( Input.GetMouseButton(0) )
         {
             UseTool();
         }
+    }
+
+    private void SelectTile()
+    {
+        selectedTilePosition = tileMapReadController.GetGridPosition(Input.mousePosition, true);
+    }
+
+    void CanSelectCheck()
+    {
+        Vector2 characterPosition = transform.position;
+        Vector2 cameraPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        selectables = Vector2.Distance(characterPosition, cameraPosition) < maxDistance;
+        markerManager.Show(selectables);
+
+    }
+
+    private void Marker()
+    {
+
+        markerManager.markedCellPosition = selectedTilePosition;
     }
 
     private void UseTool()
