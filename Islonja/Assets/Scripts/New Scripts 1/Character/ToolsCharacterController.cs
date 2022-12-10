@@ -12,6 +12,7 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] MarkerManager markerManager;
     [SerializeField] TileMapReadController tileMapReadController;
     [SerializeField] float maxDistance = 1.5f;
+    [SerializeField] CropsManager cropsManager;
 
     Vector3Int selectedTilePosition;
     bool selectables;
@@ -25,10 +26,15 @@ public class ToolsCharacterController : MonoBehaviour
     private void Update()
     {
         SelectTile();
+        CanSelectCheck();
         Marker();
         if ( Input.GetMouseButton(0) )
         {
-            UseTool();
+            if(UseToolWorld() == true)
+            {
+                return;
+            }
+            UseToolGrid();
         }
     }
 
@@ -52,7 +58,7 @@ public class ToolsCharacterController : MonoBehaviour
         markerManager.markedCellPosition = selectedTilePosition;
     }
 
-    private void UseTool()
+    private bool UseToolWorld() // for physical action in the world
     {
        Vector2 position = rgbd2d.position + character.lastDirection * offsetDistance;
 
@@ -64,8 +70,17 @@ public class ToolsCharacterController : MonoBehaviour
             if(hit != null)
             {
                 hit.Hit();
-                break;
+                return true;
             }
+        }
+        return false;
+    }
+
+    private void UseToolGrid() // for grid action in the World
+    {
+        if(selectables == true)
+        {
+            cropsManager.Plow(selectedTilePosition);
         }
     }
 
