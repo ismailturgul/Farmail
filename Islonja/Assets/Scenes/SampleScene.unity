@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f31c594f9c72cd42b79f3b2ee73aa3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toolbarSize: 12
+  toolbarSize: 10
 --- !u!1001 &213749317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1899,7 +1899,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -12132,6 +12132,10 @@ PrefabInstance:
       propertyPath: markerManager
       value: 
       objectReference: {fileID: 1536572972}
+    - target: {fileID: 5898719315015891917, guid: be14936f552b8a4418da679673ab4fa3, type: 3}
+      propertyPath: plowableTiles
+      value: 
+      objectReference: {fileID: 11400000, guid: b35ddc9427b558e4f9ff6b3738a02c3f, type: 2}
     - target: {fileID: 5898719315015891917, guid: be14936f552b8a4418da679673ab4fa3, type: 3}
       propertyPath: tileMapReadController
       value: 
