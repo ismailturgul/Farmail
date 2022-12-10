@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+
 public class ToolsCharacterController : MonoBehaviour
 {
 
@@ -13,6 +15,7 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] TileMapReadController tileMapReadController;
     [SerializeField] float maxDistance = 1.5f;
     [SerializeField] CropsManager cropsManager;
+    [SerializeField] TileData plowableTiles;
 
     Vector3Int selectedTilePosition;
     bool selectables;
@@ -80,7 +83,19 @@ public class ToolsCharacterController : MonoBehaviour
     {
         if(selectables == true)
         {
-            cropsManager.Plow(selectedTilePosition);
+            TileBase tileBase = tileMapReadController.GetTileBase(selectedTilePosition);
+            TileData tileData = tileMapReadController.GetTileData(tileBase);
+            
+            if(tileData != plowableTiles) { return; }
+
+            if(cropsManager.Check(selectedTilePosition))
+            {
+                cropsManager.Seed(selectedTilePosition);
+            }
+            else
+            {
+                cropsManager.Plow(selectedTilePosition);
+            }
         }
     }
 
