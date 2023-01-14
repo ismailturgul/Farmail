@@ -3,7 +3,11 @@ guid: 8d5812b129440e0468dc712ff12a7cc4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - markerManager: {instanceID: 0}
+  - tileMapReadController: {instanceID: 0}
+  - cropsManager: {instanceID: 0}
+  - plowableTiles: {fileID: 11400000, guid: b35ddc9427b558e4f9ff6b3738a02c3f, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

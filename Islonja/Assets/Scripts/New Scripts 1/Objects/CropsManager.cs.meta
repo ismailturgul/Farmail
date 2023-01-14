@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: eedec10133649fd4ba36bfa72b713ca6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - plowed: {fileID: 11400000, guid: 94853a3f73a58404bab9cf2ea5f63bbd, type: 2}
+  - seeded: {fileID: 11400000, guid: 28bdaa2791bc2fc4d982c168a8fb2ae4, type: 2}
+  - targetTilemap: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -19,7 +19,7 @@ public class TileMapReadController : MonoBehaviour
             {
                 dataFromTiles.Add(tile, tileData);
             }
-            
+
         }
     }
 
@@ -35,7 +35,7 @@ public class TileMapReadController : MonoBehaviour
         {
             worldPosition = position;
         }
-        
+
         Vector3Int gridPosition = tilemap.WorldToCell(worldPosition);
 
         return gridPosition;
@@ -55,6 +55,6 @@ public class TileMapReadController : MonoBehaviour
         {
             return null;
         }
-            return dataFromTiles[tilebase];
+        return dataFromTiles[tilebase];
     }
 }

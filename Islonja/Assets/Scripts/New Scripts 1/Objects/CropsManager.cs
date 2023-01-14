@@ -25,23 +25,22 @@ public class CropsManager : MonoBehaviour
 
     public bool Check(Vector3Int position)
     {
-        return crops.ContainsKey((Vector2Int)position);
+        bool check = crops.ContainsKey((Vector2Int)position);
+        Debug.Log("Tile at position " + position + " is plowed: " + check);
+        return check;
     }
-
-
     public void Plow(Vector3Int position)
     {
-        if(crops.ContainsKey((Vector2Int)position))
+        Debug.Log("Current state of tile before adding: " + crops.ContainsKey((Vector2Int)position));
+
+        if (crops.ContainsKey((Vector2Int)position))
         {
             return;
         }
-
+        Debug.Log("Plowing tile at position: " + position);  // Check the tile plowed or not
         CreatePlowedTile(position);
-    }
+        Debug.Log("Current state of crops dictionary: " + crops);
 
-    public void Seed(Vector3Int position)
-    {
-        targetTilemap.SetTile(position, seeded);
     }
     private void CreatePlowedTile(Vector3Int position)
     {
@@ -49,5 +48,9 @@ public class CropsManager : MonoBehaviour
         crops.Add((Vector2Int)position, crop);
 
         targetTilemap.SetTile(position, plowed);
+    }
+    public void Seed(Vector3Int position)
+    {
+        targetTilemap.SetTile(position, seeded);
     }
 }

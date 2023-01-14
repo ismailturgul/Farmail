@@ -23,30 +23,39 @@ public class ToolsCharacterController : MonoBehaviour
     private void Awake()
     {
         character = GetComponent<CharacterController2D>();
-        rgbd2d= GetComponent<Rigidbody2D>();
+        rgbd2d = GetComponent<Rigidbody2D>();
     }
-
+    bool clickProcessed = false;
     private void Update()
     {
         SelectTile();
         CanSelectCheck();
         Marker();
-        if ( Input.GetMouseButton(0) )
+        if (Input.GetMouseButton(0))
         {
-            if(UseToolWorld() == true)
+            if (!clickProcessed)
             {
-                return;
+                clickProcessed = true;
+                if (UseToolWorld() == true)
+                {
+                    return;
+                }
+                UseToolGrid();
             }
-            UseToolGrid();
+        }
+        else
+        {
+            clickProcessed = false;
         }
     }
+
 
     private void SelectTile()
     {
         selectedTilePosition = tileMapReadController.GetGridPosition(Input.mousePosition, true);
     }
 
-    void CanSelectCheck()
+    public void CanSelectCheck()
     {
         Vector2 characterPosition = transform.position;
         Vector2 cameraPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -61,16 +70,16 @@ public class ToolsCharacterController : MonoBehaviour
         markerManager.markedCellPosition = selectedTilePosition;
     }
 
-    private bool UseToolWorld() // for physical action in the world
+    public bool UseToolWorld() // for physical action in the world
     {
-       Vector2 position = rgbd2d.position + character.lastDirection * offsetDistance;
+        Vector2 position = rgbd2d.position + character.lastDirection * offsetDistance;
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(position, sizeOfInteractableArea);
-        
-        foreach(Collider2D c in colliders)
+
+        foreach (Collider2D c in colliders)
         {
             ToolHits hit = c.GetComponent<ToolHits>();
-            if(hit != null)
+            if (hit != null)
             {
                 hit.Hit();
                 return true;
@@ -79,18 +88,24 @@ public class ToolsCharacterController : MonoBehaviour
         return false;
     }
 
-    private void UseToolGrid() // for grid action in the World
+    public void UseToolGrid() // for grid action in the World
     {
-        if(selectables == true)
+        Debug.Log("Value of selectables: " + selectables);
+
+        if (selectables == true)
         {
             TileBase tileBase = tileMapReadController.GetTileBase(selectedTilePosition);
             TileData tileData = tileMapReadController.GetTileData(tileBase);
-            
-            if(tileData != plowableTiles) { return; }
 
-            if(cropsManager.Check(selectedTilePosition))
+            if (tileData != plowableTiles) { return; }
+            Debug.Log("Value of cropsManager.Check(selectedTilePosition): " + cropsManager.Check(selectedTilePosition));
+
+            if (cropsManager.Check(selectedTilePosition) == true)
             {
+                Debug.Log("Seeding tile at position: " + selectedTilePosition);
+
                 cropsManager.Seed(selectedTilePosition);
+              
             }
             else
             {
