@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class treeCutable : ToolHits
+[RequireComponent(typeof(BoxCollider2D))]
+public class ResourceNode : ToolHits
 {
     [SerializeField] GameObject pickUpDrop;
     [SerializeField] float spread = 0.7f;

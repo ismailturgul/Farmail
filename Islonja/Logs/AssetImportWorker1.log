@@ -506,3 +506,19 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 177846.823637 seconds.
+  path: Assets/Sprites/Tools/Fishing-Rod-Catching-Sheet.png
+  artifactKey: Guid(48af3ee9fb9dd8c4987b148bac02e995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tools/Fishing-Rod-Catching-Sheet.png using Guid(48af3ee9fb9dd8c4987b148bac02e995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1dfdd4de2d9123d23fc38898bf5560b') in 0.216423 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Sprites/Tools/Fishing-Rod-Reeling-Sheet.png
+  artifactKey: Guid(2206d2785ad09574e8c87e901e08179d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tools/Fishing-Rod-Reeling-Sheet.png using Guid(2206d2785ad09574e8c87e901e08179d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ff6e678b157f82ce4bc632b3a35a839') in 0.023512 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
