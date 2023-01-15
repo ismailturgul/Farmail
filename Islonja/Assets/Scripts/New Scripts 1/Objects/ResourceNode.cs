@@ -11,6 +11,7 @@ public class ResourceNode : ToolHits
     [SerializeField] Item item;
     [SerializeField] int itemCountInOneDrop = 1;
     [SerializeField] int dropCount = 5;
+    [SerializeField] ResourceNodeType nodeType;
 
     public override void Hit()
     {
@@ -30,4 +31,8 @@ public class ResourceNode : ToolHits
         Destroy(gameObject);
     }
 
+    public override bool CanBeHit(List<ResourceNodeType> canBeHit)
+    {
+        return canBeHit.Contains(nodeType);
+    }
 }

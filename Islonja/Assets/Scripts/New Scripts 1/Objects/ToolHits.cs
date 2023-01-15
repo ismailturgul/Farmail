@@ -9,4 +9,9 @@ public class ToolHits : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public virtual bool CanBeHit(List<ResourceNodeType> canBeHit)
+    {
+        return true;
+    }
 }

@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 
+public enum ResourceNodeType  
+{
+    Undefined,
+    Tree,
+    Stone
+}
+
 [CreateAssetMenu(menuName ="Data/Tool action/Gather Resource Node")]
 public class GatherResourceNode : ToolAction 
 {
     [SerializeField] float sizeOfInteractableArea = 1f;
+    [SerializeField] List<ResourceNodeType> canHitNodesOfType;
     public override bool OnApply(Vector2 worldPoint)
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(worldPoint, sizeOfInteractableArea);
@@ -16,8 +24,11 @@ public class GatherResourceNode : ToolAction
             ToolHits hit = c.GetComponent<ToolHits>();
             if (hit != null)
             {
-                hit.Hit();
-                return true;
+                if(hit.CanBeHit(canHitNodesOfType) == true)
+                {
+                    hit.Hit();
+                    return true;
+                }
             }
         }
         return false;
