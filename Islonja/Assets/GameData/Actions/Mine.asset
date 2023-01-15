@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0d1651a245e5c64a9ba00a2a41066bd, type: 3}
-  m_Name: breakStone
+  m_Name: Mine
   m_EditorClassIdentifier: 
   sizeOfInteractableArea: 1
+  canHitNodesOfType: 02000000
