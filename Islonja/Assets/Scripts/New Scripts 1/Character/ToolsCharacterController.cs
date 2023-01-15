@@ -15,8 +15,7 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] MarkerManager markerManager;
     [SerializeField] TileMapReadController tileMapReadController;
     [SerializeField] float maxDistance = 1.5f;
-    [SerializeField] CropsManager cropsManager;
-    [SerializeField] TileData plowableTiles;
+
 
     Vector3Int selectedTilePosition;
     bool selectables;
@@ -91,23 +90,13 @@ public class ToolsCharacterController : MonoBehaviour
 
         if (selectables == true)
         {
-            TileBase tileBase = tileMapReadController.GetTileBase(selectedTilePosition);
-            TileData tileData = tileMapReadController.GetTileData(tileBase);
 
-            if (tileData != plowableTiles) { return; }
-            Debug.Log("Value of cropsManager.Check(selectedTilePosition): " + cropsManager.Check(selectedTilePosition));
+            Item item = toolbarController.GetItem;
+            if (item == null) { return; }
+            if (item.onTileMapAction == null) { return; }
 
-            if (cropsManager.Check(selectedTilePosition) == true)
-            {
-                Debug.Log("Seeding tile at position: " + selectedTilePosition);
-
-                cropsManager.Seed(selectedTilePosition);
-              
-            }
-            else
-            {
-                cropsManager.Plow(selectedTilePosition);
-            }
+            //animator.SetTrigger("act");
+            bool complete = item.onTileMapAction.OnApplyToTileMap(selectedTilePosition, tileMapReadController);
         }
     }
 

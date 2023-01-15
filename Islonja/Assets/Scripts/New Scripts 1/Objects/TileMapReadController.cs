@@ -6,7 +6,11 @@ using UnityEngine.Tilemaps;
 
 public class TileMapReadController : MonoBehaviour
 {
+    
     [SerializeField] Tilemap tilemap;
+    public CropsManager cropsManager;
+    
+
     [SerializeField] List<TileData> tileDatas;
     Dictionary<TileBase, TileData> dataFromTiles;
     private void Start()
