@@ -53,12 +53,39 @@ public class ItemContainer : ScriptableObject
         }
         else
         {
-            // add non stackable item to our item container
+            // add non stackable  item to our item container
             ItemSlot itemSlot = slots.Find(x => x.item == null);
             if(itemSlot != null)
             {
                 itemSlot.item = item;
             }
+        }
+    }
+
+    public void Remove(Item itemToRemove, int count = 1)
+    {
+        if(itemToRemove.stackable)
+        {
+            ItemSlot itemSlot = slots.Find(x => x.item == itemToRemove);
+            if (itemSlot == null) { return; }
+
+            itemSlot.count -= count;
+            if (itemSlot.count < 0)
+            {
+                itemSlot.Clear();
+            }
+        }
+        else
+        {
+            while(count > 0)
+            {
+                count -= 1;
+
+                ItemSlot itemSlot = slots.Find(x => x.item == itemToRemove);
+                if (itemSlot == null) { return; }
+                itemSlot.Clear();
+            }
+
         }
     }
 }
