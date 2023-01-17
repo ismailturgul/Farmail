@@ -10,7 +10,7 @@ public class CropsTile
     public int growTimer;
     public Crop crop;
 }
-public class CropsManager : MonoBehaviour
+public class CropsManager : TimeAgent
 {
 
     [SerializeField] TileBase plowed;
@@ -22,8 +22,24 @@ public class CropsManager : MonoBehaviour
     private void Start()
     {
         crops = new Dictionary<Vector2Int, CropsTile>();
+        onTimeTick += Tick;
+        Init();
     }
 
+    public void Tick()
+    {
+        foreach (CropsTile cropTile in crops.Values)
+        {
+            if (cropTile.crop == null) { continue; }
+            cropTile.growTimer += 1;
+
+            if(cropTile.growTimer >= cropTile.crop.timeToGrow) 
+            {
+                Debug.Log("iﬂm done growing");
+                cropTile.crop = null;
+            }
+        }
+    }
     public bool Check(Vector3Int position)
     {
         bool check = crops.ContainsKey((Vector2Int)position);

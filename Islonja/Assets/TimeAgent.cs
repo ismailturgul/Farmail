@@ -9,7 +9,13 @@ public class TimeAgent : MonoBehaviour
 
     void Start()
     {
+        Init();
+    }
+
+    public void Init()
+    {
         GameManager.instance.timeController.Subscribe(this);
+
     }
 
     public void Invoke()
