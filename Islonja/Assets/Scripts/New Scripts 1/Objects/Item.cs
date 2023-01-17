@@ -9,5 +9,6 @@ public class Item : ScriptableObject
     public Sprite icon;
     public ToolAction onAction;
     public ToolAction onTileMapAction;
+    public ToolAction onItemUsed;
 }
 

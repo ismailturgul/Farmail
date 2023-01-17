@@ -81,6 +81,14 @@ public class ToolsCharacterController : MonoBehaviour
 
         bool complete = item.onAction.OnApply(position);
 
+        if (complete == true)
+        {
+            if (item.onItemUsed != null)
+            {
+                item.onItemUsed.OnItemUsed(item, GameManager.instance.inventoryContainer);
+            }
+        }
+
         return complete;
     }
 
@@ -97,6 +105,14 @@ public class ToolsCharacterController : MonoBehaviour
 
             //animator.SetTrigger("act");
             bool complete = item.onTileMapAction.OnApplyToTileMap(selectedTilePosition, tileMapReadController);
+
+            if (complete == true)
+            {
+                if(item.onItemUsed != null )
+                {
+                    item.onItemUsed.OnItemUsed(item, GameManager.instance.inventoryContainer);
+                }
+            }
         }
     }
 

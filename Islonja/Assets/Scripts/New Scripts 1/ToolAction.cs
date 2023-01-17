@@ -17,4 +17,9 @@ public class ToolAction : ScriptableObject
         return true;
     }
 
+    public virtual void OnItemUsed(Item usedItem, ItemContainer inventory)
+    {
+        
+    }
+
 }
