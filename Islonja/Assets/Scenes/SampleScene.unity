@@ -11160,6 +11160,7 @@ MonoBehaviour:
   plowed: {fileID: 11400000, guid: 94853a3f73a58404bab9cf2ea5f63bbd, type: 2}
   seeded: {fileID: 11400000, guid: 28bdaa2791bc2fc4d982c168a8fb2ae4, type: 2}
   targetTilemap: {fileID: 491099291}
+  cropsSpritePrefab: {fileID: 2504629403954009608, guid: a1917810e83603e4caf6037f3a2d4be5, type: 3}
 --- !u!224 &1866908204 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6194670712856195230, guid: 525e12e054791f548b14250937f48e8f, type: 3}
@@ -11199,6 +11200,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1174930892, guid: dc362c3e6699e5f4f9065dc054816577, type: 3}
+      propertyPath: toSpawn
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d84fdf3a38988c4eb9f00b40b92915b, type: 2}
     - target: {fileID: 6348402844643558416, guid: dc362c3e6699e5f4f9065dc054816577, type: 3}
       propertyPath: m_Name
       value: TreeNL1
