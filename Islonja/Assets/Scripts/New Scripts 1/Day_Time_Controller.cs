@@ -20,6 +20,22 @@ public class Day_Time_Controller : MonoBehaviour
     [SerializeField] Light2D global_Lights;
     private int days;
 
+    List<TimeAgent> agents;
+
+    private void Awake()
+    {
+        agents = new List<TimeAgent>();
+    }
+    
+    public void Subscribe(TimeAgent timeAgent)
+    {
+        agents.Add(timeAgent);
+    }
+    public void Unsubscribe(TimeAgent timeAgent)
+    {
+        agents.Remove(timeAgent);
+    }
+
     float Hours
     {
         get { return time / 3600f; }
