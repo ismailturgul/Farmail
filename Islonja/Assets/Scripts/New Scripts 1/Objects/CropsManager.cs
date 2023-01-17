@@ -5,9 +5,10 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 
-public class Crops
+public class CropsTile
 {
-
+    public int growTimer;
+    public Crop crop;
 }
 public class CropsManager : MonoBehaviour
 {
@@ -16,11 +17,11 @@ public class CropsManager : MonoBehaviour
     [SerializeField] TileBase seeded;
     [SerializeField] Tilemap targetTilemap;
 
-    Dictionary<Vector2Int, Crops> crops;
+    Dictionary<Vector2Int, CropsTile> crops;
 
     private void Start()
     {
-        crops = new Dictionary<Vector2Int, Crops>();
+        crops = new Dictionary<Vector2Int, CropsTile>();
     }
 
     public bool Check(Vector3Int position)
@@ -42,15 +43,17 @@ public class CropsManager : MonoBehaviour
         Debug.Log("Current state of crops dictionary: " + crops);
 
     }
+    public void Seed(Vector3Int position, Crop toSeed)
+    {
+        targetTilemap.SetTile(position, seeded);
+
+        crops[(Vector2Int)position].crop = toSeed;
+    }
     private void CreatePlowedTile(Vector3Int position)
     {
-        Crops crop = new Crops();
+        CropsTile crop = new CropsTile();
         crops.Add((Vector2Int)position, crop);
 
         targetTilemap.SetTile(position, plowed);
-    }
-    public void Seed(Vector3Int position)
-    {
-        targetTilemap.SetTile(position, seeded);
     }
 }
