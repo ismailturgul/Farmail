@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Talk_Interact : Interactable
 {
+    [SerializeField] DialogueContainer dialogue;
     public override void Interact(Character character)
     {
-        Debug.Log("WAS FÜRN VERRÜCKTES SCHWEIN");
+        GameManager.instance.dialogueSystem.Initialize(dialogue);
     }
 }
