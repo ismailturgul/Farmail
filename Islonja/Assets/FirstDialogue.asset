@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FirstDialogue
   m_EditorClassIdentifier: 
   line:
-  - Priviet
-  - Kak dila
-  - paka
+  - Priviet du Lump
+  - Wie was ich hier mache ? Sieht man doch oder nicht ?
+  - "Ich b\xE4ndige dieses erhabene wesen "
   actor: {fileID: 11400000, guid: 7e3c6ec75e5bdff4eb8e0769821534f2, type: 2}

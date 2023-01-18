@@ -11,6 +11,7 @@ public class DialogueSystem : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI targetText;
     [SerializeField] TextMeshProUGUI nameText;
+    [SerializeField] Image portrait;
 
     DialogueContainer currentDialogue;
     int currentTextLine;
@@ -31,27 +32,45 @@ public class DialogueSystem : MonoBehaviour
 
     private void TypeOutText()
     {
-        if(currentTime >= totalTimeToType) { return; }
+        if(visibleTextPercent >= 1f) { return; }
         currentTime += Time.deltaTime;
-        float progress = currentTime / totalTimeToType;
-        progress = Mathf.Clamp(progress, 0, 1f);
-        int letterCount = (int)(lineToShow.Length * progress);
+        visibleTextPercent = currentTime / totalTimeToType;
+        visibleTextPercent = Mathf.Clamp(visibleTextPercent, 0, 1f);
+        UpdateText();
+
+    }
+    private void UpdateText()
+    {
+        int letterCount = (int)(lineToShow.Length * visibleTextPercent);
         targetText.text = lineToShow.Substring(0, letterCount);
     }
 
     private void PushText()
     {
-        currentTextLine += 1;
+       if(visibleTextPercent < 1f)
+        {
+            visibleTextPercent = 1f;
+            UpdateText();
+
+            return;
+        }
+
         if(currentTextLine >= currentDialogue.line.Count)
         {
             ConClude();
         }else
         {
-            lineToShow= currentDialogue.line[currentTextLine];
-            totalTimeToType = lineToShow.Length * timePerLetter;
-            currentTime = 0f;
-            targetText.text = "";
+            CycleLine();
         }
+    }
+    void CycleLine()
+    {
+        lineToShow = currentDialogue.line[currentTextLine];
+        totalTimeToType = lineToShow.Length * timePerLetter;
+        currentTime = 0f;
+        targetText.text = "";
+        visibleTextPercent = 0f;
+        currentTextLine += 1; 
     }
 
     public void Initialize(DialogueContainer dialogueContainer)
@@ -59,7 +78,15 @@ public class DialogueSystem : MonoBehaviour
         Show(true);
         currentDialogue = dialogueContainer;
         currentTextLine = 0;
-        targetText.text = currentDialogue.line[currentTextLine];
+        CycleLine();
+        UpdatePortrait();
+
+    }
+
+    private void UpdatePortrait()
+    {
+        portrait.sprite = currentDialogue.actor.portrait;
+        nameText.text = currentDialogue.actor.Name;
     }
 
     private void Show(bool v)
