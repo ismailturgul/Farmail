@@ -25,11 +25,15 @@ public class GameSceneManager : MonoBehaviour
         currentScene = to;
         Transform playerTransform = GameManager.instance.transform;
 
-        playerTransform.position = new Vector3(
-            targetPosition.x,
-            targetPosition.y,
-            playerTransform.position.z
-            );
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null)
+        {
+            player.transform.position = targetPosition;
+        }
+        else
+        {
+            Debug.LogError("Player object not found in new scene!");
+        }
 
     }
 }

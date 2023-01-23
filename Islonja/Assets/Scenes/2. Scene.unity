@@ -183,6 +183,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5380116387447040141, guid: e8ab2b03f503e734ab16d580a6449018, type: 3}
+      propertyPath: targetPosition.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380116387447040141, guid: e8ab2b03f503e734ab16d580a6449018, type: 3}
+      propertyPath: targetPosition.y
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380116387447040141, guid: e8ab2b03f503e734ab16d580a6449018, type: 3}
       propertyPath: sceneNameToTransition
       value: SampleScene
       objectReference: {fileID: 0}
