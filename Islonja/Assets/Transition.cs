@@ -13,6 +13,7 @@ public class Transition : MonoBehaviour
 {
     [SerializeField] TransitionType transitionType;
     [SerializeField] string sceneNameToTransition;
+    [SerializeField] Vector3 targetPosition;
 
     Transform destination;
     void Start()
@@ -32,7 +33,7 @@ public class Transition : MonoBehaviour
                 );
                 break;
             case TransitionType.Scene:
-                SceneManager.LoadScene(sceneNameToTransition);
+                GameSceneManager.instance.SwitchScene(sceneNameToTransition, targetPosition);
                 break;
 
         }
