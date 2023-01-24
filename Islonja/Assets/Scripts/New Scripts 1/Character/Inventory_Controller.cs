@@ -6,6 +6,7 @@ public class Inventory_Controller : MonoBehaviour
 {
 
     [SerializeField] GameObject panel;
+    [SerializeField] GameObject statusPanel;
     [SerializeField] GameObject toolbarPanel;
 
     private void Update()
@@ -13,6 +14,7 @@ public class Inventory_Controller : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Tab))
         {
             panel.SetActive(!panel.activeInHierarchy);
+            statusPanel.SetActive(!statusPanel.activeInHierarchy);
             toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
         }
     }
