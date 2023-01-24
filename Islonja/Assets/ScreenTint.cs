@@ -11,25 +11,24 @@ public class ScreenTint : MonoBehaviour
     [SerializeField] Color tintedColor;
 
     float f;
-    [SerializeField] float speed = 0.5f;
+    public float speed = 0.5f;
     Image image;
     private void Awake()
     {
         image = GetComponent<Image>();
 
     }
-    private void Start()
-    {
-        Tint();
-    }
+ 
     public void Tint()
     {
+        StopAllCoroutines();
         f = 0f;
         StartCoroutine(TintScreen());
     }
 
     public void UnTint()
     {
+        StopAllCoroutines();
         f = 0f;
         StartCoroutine(UnTintScreen());
     }
@@ -48,7 +47,7 @@ public class ScreenTint : MonoBehaviour
             yield return new WaitForEndOfFrame();
 
         }
-        UnTint();
+      
     }
     private IEnumerator UnTintScreen()
     {
