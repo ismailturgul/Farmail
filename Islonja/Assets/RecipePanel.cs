@@ -16,9 +16,9 @@ public class RecipePanel : ItemPanel
 
     public override void OnClick(int id)
     {
-        if(id >= recipeList.craftingRecipes.Count)
-        {
+        if(id >= recipeList.craftingRecipes.Count) { return; }
+        
             crafting.Craft(recipeList.craftingRecipes[id]);
-        }
+        
     }
 }
