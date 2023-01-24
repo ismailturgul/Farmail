@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RecipePanel : MonoBehaviour
+public class RecipePanel : ItemPanel
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] RecipeList recipeList;
 
-    // Update is called once per frame
-    void Update()
+    public override void Show()
     {
-        
+        for (int i = 0; i < buttons.Count && i < recipeList.craftingRecipes.Count; i++)
+        {
+            buttons[i].Set(recipeList.craftingRecipes[i].output);
+        }
     }
 }
