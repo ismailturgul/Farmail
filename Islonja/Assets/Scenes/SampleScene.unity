@@ -1552,7 +1552,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aaa52e830a770284599c0147aeb2ecaf, type: 2}
+  - {fileID: 2100000, guid: 0daa9bde6d515be468b9191ac865beab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11439,6 +11439,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2540186574461920525, guid: 8ea9dda58b4fcf4499531e4c02192e18, type: 3}
   m_PrefabInstance: {fileID: 3030696649152877184}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4336317965527758815
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 209474743937308946, guid: 0fae85a1a1d16ad449a035d52bf659c0, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 209474743937308946, guid: 0fae85a1a1d16ad449a035d52bf659c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 209474743937308946, guid: 0fae85a1a1d16ad449a035d52bf659c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 22.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 209474743937308946, guid: 0fae85a1a1d16ad449a035d52bf659c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 209474743937308946, guid: 0fae85a1a1d16ad449a035d52bf659c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 209474743937308946, guid: 0fae85a1a1d16ad449a035d52bf659c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 209474743937308946, guid: 0fae85a1a1d16ad449a035d52bf659c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 209474743937308946, guid: 0fae85a1a1d16ad449a035d52bf659c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 209474743937308946, guid: 0fae85a1a1d16ad449a035d52bf659c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 209474743937308946, guid: 0fae85a1a1d16ad449a035d52bf659c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 209474743937308946, guid: 0fae85a1a1d16ad449a035d52bf659c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987333341840658546, guid: 0fae85a1a1d16ad449a035d52bf659c0, type: 3}
+      propertyPath: m_Name
+      value: Steinkeil
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0fae85a1a1d16ad449a035d52bf659c0, type: 3}
 --- !u!1001 &5380116386675981835
 PrefabInstance:
   m_ObjectHideFlags: 0
