@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c50269ca9bf622147bfc306dc77e74cf, type: 3}
-  m_Name: Axe
+  m_Script: {fileID: 11500000, guid: 5d3d5c8c2998bc242b064bea8c2ece06, type: 3}
+  m_Name: KnownRecipies
   m_EditorClassIdentifier: 
-  Name: 
-  stackable: 0
-  icon: {fileID: 1775437601, guid: acb272632e175f84ea0d4f8498dddea9, type: 3}
-  onAction: {fileID: 11400000, guid: 4c40bfc97c90a704dbb2bf3aff5552eb, type: 2}
+  craftingRecipes:
+  - {fileID: 11400000, guid: a2e61c80b6562484dac6aa200c61b7f5, type: 2}

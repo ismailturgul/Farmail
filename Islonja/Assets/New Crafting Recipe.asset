@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: New Crafting Recipe
   m_EditorClassIdentifier: 
   elements:
-  - item: {fileID: 0}
-    count: 0
+  - item: {fileID: 11400000, guid: 7bb36e363f37e1341bbeecf20baf8532, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: 5acfe3f274c226c4a8ca8c47a7356af5, type: 2}
+    count: 1
   output:
-    item: {fileID: 0}
-    count: 0
+    item: {fileID: 11400000, guid: a80f5c6188095fa47873d220261c667c, type: 2}
+    count: 1
