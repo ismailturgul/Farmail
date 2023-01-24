@@ -25,7 +25,7 @@ public class ItemPanel : MonoBehaviour
     }
     private void Set_Index()
     {
-        for (int i = 0; i < inventory.slots.Count && i < buttons.Count; i++)
+        for (int i = 0; i < buttons.Count; i++)
         {
             buttons[i].Set_Index(i);
         }
