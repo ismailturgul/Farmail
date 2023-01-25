@@ -51,17 +51,16 @@ public class CropsManager : TimeAgent
     }
     [SerializeField] GameObject cropsSpritePrefab;
 
-    Dictionary<Vector2Int, CropsTile> crops;
 
     private void Start()
     {
-        crops = new Dictionary<Vector2Int, CropsTile>();
         onTimeTick += Tick;
         Init();
     }
 
     public void Tick()
     {
+        /*
         if (TargetTilemap == null) { return; }
 
         foreach (CropsTile cropTile in crops.Values)
@@ -98,8 +97,9 @@ public class CropsManager : TimeAgent
                     targetTilemap.SetTile(cropTile.position, plowed);
                 }
             }
-        }
+        }*/
     }
+
     public bool Check(Vector3Int position)
     {
         if (TargetTilemap == null) { return false; }

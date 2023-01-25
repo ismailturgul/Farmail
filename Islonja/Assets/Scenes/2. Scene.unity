@@ -1018,7 +1018,7 @@ GameObject:
   - component: {fileID: 414823635}
   - component: {fileID: 414823634}
   m_Layer: 0
-  m_Name: 1. Layer
+  m_Name: Farmland
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20975,7 +20975,7 @@ GameObject:
   - component: {fileID: 1615583396}
   - component: {fileID: 1615583395}
   m_Layer: 0
-  m_Name: 2. Layer
+  m_Name: CropsTilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
