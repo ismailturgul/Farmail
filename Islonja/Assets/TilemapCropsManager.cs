@@ -16,6 +16,7 @@ public class TilemapCropsManager : TimeAgent
 
     private void Start()
     {
+        GameManager.instance.GetComponent<CropsManager>().cropsManager = this;
         targetTilemap = GetComponent<Tilemap>();
         onTimeTick += Tick;
         Init();
@@ -25,9 +26,9 @@ public class TilemapCropsManager : TimeAgent
     public void Tick()
     {
 
-        if (TargetTilemap == null) { return; }
+        if (targetTilemap == null) { return; }
 
-        foreach (CropsTile cropTile in crops.Values)
+        foreach (CropsTile cropTile in container.crops)
         {
             if (cropTile.crop == null) { continue; }
 
@@ -37,7 +38,7 @@ public class TilemapCropsManager : TimeAgent
             if (cropTile.damage > 1f)
             {
                 cropTile.Harvested();
-                TargetTilemap.SetTile(cropTile.position, plowed);
+                targetTilemap.SetTile(cropTile.position, plowed);
                 continue;
             }
 

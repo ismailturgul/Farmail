@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 
+[Serializable]
 public class CropsTile
 {
     public int growTimer;

@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="Data/Crops Container")]
 public class CropsContainer : ScriptableObject
 {
-    List<CropsTile> crops;
+    public List<CropsTile> crops;
 
     public CropsTile Get(Vector3Int position)
     {
