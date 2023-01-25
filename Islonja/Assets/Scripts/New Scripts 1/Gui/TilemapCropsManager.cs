@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 public class TilemapCropsManager : TimeAgent
 {
@@ -22,7 +23,13 @@ public class TilemapCropsManager : TimeAgent
         Init();
     }
 
-
+    private void OnDestroy()
+    {
+        for (int i = 0; i < container.crops.Count; i++)
+        {
+            container.crops[i].renderer = null;
+        }
+    }
     public void Tick()
     {
 
@@ -81,19 +88,36 @@ public class TilemapCropsManager : TimeAgent
 
         tile.crop = toSeed;
     }
+
+    public void VisualizeTile(CropsTile cropsTile)
+    {
+        if(cropsTile.crop != null)
+        {
+            targetTilemap.SetTile(cropsTile.position, seeded);
+        }
+        else
+        {
+            targetTilemap.SetTile(cropsTile.position, plowed);
+        }
+
+        if(cropsTile.renderer == null)
+        {
+
+            GameObject go = Instantiate(cropsSpritePrefab);
+            go.transform.position = targetTilemap.CellToWorld(cropsTile.position);
+            go.transform.position -= Vector3.forward * 0.01f;
+            cropsTile.renderer = go.GetComponent<SpriteRenderer>();
+        }
+    
+    }
     private void CreatePlowedTile(Vector3Int position)
     {
         CropsTile crop = new CropsTile();
         container.Add(crop);
 
-        GameObject go = Instantiate(cropsSpritePrefab);
-        go.transform.position = targetTilemap.CellToWorld(position);
-        go.transform.position -= Vector3.forward * 0.01f;
-        go.SetActive(false);
-        crop.renderer = go.GetComponent<SpriteRenderer>();
 
         crop.position = position;
-
+        VisualizeTile(crop);
         targetTilemap.SetTile(position, plowed);
     }
 
@@ -112,8 +136,8 @@ public class TilemapCropsManager : TimeAgent
                 );
 
 
-            targetTilemap.SetTile(gridPosition, plowed);
             tile.Harvested();
+            VisualizeTile(tile);
         }
     }
 
