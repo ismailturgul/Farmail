@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
@@ -30,140 +32,46 @@ public class CropsTile
         damage = 0;
     }
 }
-public class CropsManager : TimeAgent
+public class CropsManager : MonoBehaviour
 {
-
-    [SerializeField] TileBase plowed;
-    [SerializeField] TileBase seeded;
-    [SerializeField] Tilemap targetTilemap;
-    Tilemap TargetTilemap
+    public TilemapCropsManager cropsManager;
+    public void PickUp(Vector3Int position)
     {
-        get
+        if (cropsManager == null)
         {
-            if(targetTilemap == null)
-            {
-                GameObject go = GameObject.Find("CropsTilemap");
-                if(go == null) { return null; }
-                targetTilemap = go.GetComponent<Tilemap>();
-            }
-            return targetTilemap;
-        }
-    }
-    [SerializeField] GameObject cropsSpritePrefab;
-
-
-    private void Start()
-    {
-        onTimeTick += Tick;
-        Init();
-    }
-
-    public void Tick()
-    {
-        /*
-        if (TargetTilemap == null) { return; }
-
-        foreach (CropsTile cropTile in crops.Values)
-        {
-            if (cropTile.crop == null) { continue; }
-
-  
-            cropTile.damage += 0.02f;
-
-            if (cropTile.damage > 1f)
-            {
-                cropTile.Harvested();
-                TargetTilemap.SetTile(cropTile.position, plowed);
-                continue;
-            }
-
-            if (cropTile.Complete)
-            {
-                Debug.Log("ißm done growing");
-                    continue;
-            }
-            
-            cropTile.growTimer += 1;
-
-            if(cropTile.growTimer >= cropTile.crop.growthStageTime[cropTile.growStage])
-            {
-                cropTile.renderer.gameObject.SetActive(true);
-                cropTile.renderer.sprite = cropTile.crop.sprites[cropTile.growStage];
-
-
-                cropTile.growStage += 1;
-                if (cropTile.growStage == 1)
-                {
-                    targetTilemap.SetTile(cropTile.position, plowed);
-                }
-            }
-        }*/
-    }
-
-    public bool Check(Vector3Int position)
-    {
-        if (TargetTilemap == null) { return false; }
-        bool check = crops.ContainsKey((Vector2Int)position);
-        Debug.Log("Tile at position " + position + " is plowed: " + check);
-        return check;
-    }
-    public void Plow(Vector3Int position)
-    {
-        if (TargetTilemap == null) { return; }
-        Debug.Log("Current state of tile before adding: " + crops.ContainsKey((Vector2Int)position));
-
-        if (crops.ContainsKey((Vector2Int)position))
-        {
+            Debug.LogWarning("No Tilemap cropsmanager are referenced in the cropsmanager");
             return;
         }
-        Debug.Log("Plowing tile at position: " + position);  // Check the tile plowed or not
-        CreatePlowedTile(position);
-        Debug.Log("Current state of crops dictionary: " + crops);
-
+        cropsManager.PickUp(position);
     }
-    public void Seed(Vector3Int position, Crop toSeed)
+    public bool Check(Vector3Int position)
     {
-        if (TargetTilemap == null) { return; }
-        TargetTilemap.SetTile(position, seeded);
-
-        crops[(Vector2Int)position].crop = toSeed;
-    }
-    private void CreatePlowedTile(Vector3Int position)
-    {
-        if (TargetTilemap == null) { return; }
-        CropsTile crop = new CropsTile();
-        crops.Add((Vector2Int)position, crop);
-        
-        GameObject go = Instantiate(cropsSpritePrefab);
-        go.transform.position = TargetTilemap.CellToWorld(position);
-        go.transform.position -= Vector3.forward * 0.01f;
-        go.SetActive(false);
-        crop.renderer = go.GetComponent<SpriteRenderer>();
-
-        crop.position = position;
-
-        TargetTilemap.SetTile(position, plowed);
+        if (cropsManager == null)
+        {
+            Debug.LogWarning("No Tilemap cropsmanager are referenced in the cropsmanager");
+            return false;
+        }
+        return cropsManager.Check(position);
     }
 
-    internal void PickUp(Vector3Int gridPosition)
+    public void Seed(Vector3Int position,Crop toSeed)
     {
-        if(TargetTilemap == null) { return; }
-        Vector2Int position = (Vector2Int)gridPosition;
-        if(crops.ContainsKey(position) == false) { return; }
+        if (cropsManager == null)
+        {
+            Debug.LogWarning("No Tilemap cropsmanager are referenced in the cropsmanager");
+            return;
+        }
+        cropsManager.Seed(position, toSeed);
+    }
 
-            CropsTile cropTile = crops[position];
-
-            if (cropTile.Complete)
+    public void Plow(Vector3Int position)
+    {
+            if (cropsManager == null) 
             {
-                ItemSpawnManager.instance.SpawnItem(
-                    TargetTilemap.CellToWorld(gridPosition),
-                    cropTile.crop.yield,
-                    cropTile.crop.count
-                    );
+                Debug.LogWarning("no tilemap...");
+                return;
+            } 
 
-
-                TargetTilemap.SetTile(gridPosition, plowed);
-                cropTile.Harvested();
-            }
+            cropsManager.Plow(position);
     }
 }
