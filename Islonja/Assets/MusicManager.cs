@@ -5,6 +5,13 @@ using UnityEngine.Rendering;
 
 public class MusicManager : MonoBehaviour
 {
+    public static MusicManager instance;
+
+    private void Awake()
+    {
+        instance = this; 
+    }
+
     [SerializeField] AudioSource audioSource;
     [SerializeField] float timeToSwitch;
     [SerializeField] AudioClip audioClip;

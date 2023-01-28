@@ -11483,6 +11483,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1351069620, guid: 9ad4580c6f3faa24a8fa78b8f60fb7e6, type: 3}
+    - target: {fileID: 763837637784170753, guid: b99a7627882885247aadea44b263ee59, type: 3}
+      propertyPath: opened
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 763837637784170765, guid: b99a7627882885247aadea44b263ee59, type: 3}
       propertyPath: m_Name
       value: Korb-Container

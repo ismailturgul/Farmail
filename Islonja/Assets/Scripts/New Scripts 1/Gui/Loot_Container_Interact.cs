@@ -7,6 +7,7 @@ public class Loot_Container_Interact : Interactable
     [SerializeField] GameObject closed_Chest;
     [SerializeField] GameObject opened_Chest;
     [SerializeField] bool opened = false;
+    [SerializeField] AudioClip onOpenAudio;
 
     public override void Interact(Character charachter)
     {
@@ -15,6 +16,8 @@ public class Loot_Container_Interact : Interactable
             opened = true;
             closed_Chest.SetActive(false);
             opened_Chest.SetActive(true);
+
+            AudioManager.instance.Play(onOpenAudio);
         }
     }
 }
