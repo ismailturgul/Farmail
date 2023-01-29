@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d93b6b653306424da2b61b445c3972f, type: 3}
   m_Name: Watermelon-Crop
   m_EditorClassIdentifier: 
-  timeToGrow: 11
+  timeToGrow: 14
   yield: {fileID: 11400000, guid: 31eafd1f212cedc4bb3c74846d12cc0f, type: 2}
-  count: 3
+  count: 4
   sprites:
-  - {fileID: 264165531, guid: f52cee92017365f4abc3681de7dd017a, type: 3}
-  - {fileID: -1615879233, guid: f52cee92017365f4abc3681de7dd017a, type: 3}
-  - {fileID: -60417628, guid: f52cee92017365f4abc3681de7dd017a, type: 3}
-  growthStageTime: 04000000070000000b000000
+  - {fileID: -1911816080, guid: 910e6d7dad3e48e4b95a90e378b2e2a0, type: 3}
+  - {fileID: -1939306701, guid: 910e6d7dad3e48e4b95a90e378b2e2a0, type: 3}
+  - {fileID: 706129462, guid: 910e6d7dad3e48e4b95a90e378b2e2a0, type: 3}
+  - {fileID: -1653873755, guid: 910e6d7dad3e48e4b95a90e378b2e2a0, type: 3}
+  growthStageTime: 04000000070000000b0000000e000000
