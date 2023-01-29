@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c50269ca9bf622147bfc306dc77e74cf, type: 3}
-  m_Name: Carrot
+  m_Name: Pineapple
   m_EditorClassIdentifier: 
-  Name: Carrot
+  Name: Pineapple
   stackable: 1
-  icon: {fileID: -190558116, guid: 0efa7b479682b2447a5b7bbe70f55607, type: 3}
+  icon: {fileID: -168308867, guid: 0efa7b479682b2447a5b7bbe70f55607, type: 3}
   onAction: {fileID: 0}
   onTileMapAction: {fileID: 0}
   onItemUsed: {fileID: 0}
