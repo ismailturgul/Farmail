@@ -6,7 +6,7 @@ public class Loot_Container_Interact : Interactable
 {
     [SerializeField] GameObject closed_Chest;
     [SerializeField] GameObject opened_Chest;
-    [SerializeField] bool opened = false;
+    [SerializeField] bool opened;
     [SerializeField] AudioClip onOpenAudio;
 
     public override void Interact(Character charachter)

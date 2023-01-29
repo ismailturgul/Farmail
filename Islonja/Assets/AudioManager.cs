@@ -9,8 +9,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     public void Awake()
-    {
-        
+    { 
         instance = this; 
     }
 
@@ -38,6 +37,9 @@ public class AudioManager : MonoBehaviour
     public void Play(AudioClip audioClip)
     {
         AudioSource audioSource = GetFreeAudioSource();
+
+        audioSource.clip = audioClip;
+        audioSource.Play();
     }
 
     private AudioSource GetFreeAudioSource()

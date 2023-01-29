@@ -14,10 +14,11 @@ public class MusicManager : MonoBehaviour
 
     [SerializeField] AudioSource audioSource;
     [SerializeField] float timeToSwitch;
-    [SerializeField] AudioClip audioClip;
+
+    [SerializeField] AudioClip playOnStart;
     private void Start()
     {
-        Play(audioClip);
+        Play(playOnStart, true);
     }
 
     public void Play(AudioClip musicToPlay, bool interrupt = false)
