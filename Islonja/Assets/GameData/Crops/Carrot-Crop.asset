@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d93b6b653306424da2b61b445c3972f, type: 3}
   m_Name: Carrot-Crop
   m_EditorClassIdentifier: 
-  timeToGrow: 11
+  timeToGrow: 14
   yield: {fileID: 11400000, guid: 54414189368bd374eaa60fc730632a10, type: 2}
-  count: 3
+  count: 4
   sprites:
   - {fileID: -1857404938, guid: 460d5a8a3c37da34f9279911abc1707b, type: 3}
   - {fileID: -1615879233, guid: f52cee92017365f4abc3681de7dd017a, type: 3}
   - {fileID: -60417628, guid: f52cee92017365f4abc3681de7dd017a, type: 3}
   - {fileID: -60417628, guid: f52cee92017365f4abc3681de7dd017a, type: 3}
-  growthStageTime: 04000000070000000b0000000b000000
+  growthStageTime: 04000000070000000b0000000e000000

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Pineapple-Seed
   stackable: 1
-  icon: {fileID: 21300000, guid: 12e4506b1d8bc1443a323eb6fa93f552, type: 3}
+  icon: {fileID: 21300000, guid: 25d0b4729e098f2489c923e7e8d71913, type: 3}
   onAction: {fileID: 0}
   onTileMapAction: {fileID: 11400000, guid: 542a246821a3035419c922f642e886bf, type: 2}
   onItemUsed: {fileID: 11400000, guid: 542a246821a3035419c922f642e886bf, type: 2}

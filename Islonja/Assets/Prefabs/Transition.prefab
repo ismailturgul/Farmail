@@ -148,3 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7551013e9d703dd4baf16d6150cf99d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionType: 1
+  sceneNameToTransition: 
+  targetPosition: {x: 0, y: 0, z: 0}
