@@ -18,6 +18,6 @@ MonoBehaviour:
   sprites:
   - {fileID: -1273130164, guid: 910e6d7dad3e48e4b95a90e378b2e2a0, type: 3}
   - {fileID: -42683960, guid: 910e6d7dad3e48e4b95a90e378b2e2a0, type: 3}
+  - {fileID: -570181697, guid: 910e6d7dad3e48e4b95a90e378b2e2a0, type: 3}
   - {fileID: 71746740, guid: 910e6d7dad3e48e4b95a90e378b2e2a0, type: 3}
-  - {fileID: 1707234510, guid: 910e6d7dad3e48e4b95a90e378b2e2a0, type: 3}
   growthStageTime: 04000000070000000b0000000e000000
