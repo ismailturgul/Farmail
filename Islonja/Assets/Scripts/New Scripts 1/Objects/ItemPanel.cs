@@ -23,6 +23,15 @@ public class ItemPanel : MonoBehaviour
     {
         Show();
     }
+
+    private void LateUpdate()
+    {
+        if(inventory.isDirty)
+        {
+            Show();
+            inventory.isDirty = false;
+        }
+    }
     private void Set_Index()
     {
         for (int i = 0; i < buttons.Count; i++)
