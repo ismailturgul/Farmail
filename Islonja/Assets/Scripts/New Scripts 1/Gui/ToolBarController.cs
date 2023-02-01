@@ -52,8 +52,12 @@ public class ToolBarController : MonoBehaviour
     private void UpdateHighlightIcon(int id)
     {
         Item item = GetItem;
-        
-        iconHighlight.Show =item.iconHighlight;
+        if (item == null)
+        {
+            iconHighlight.Show = false;
+            return;
+        }
+        iconHighlight.Show = item.iconHighlight;
         if(item.iconHighlight)
         {
             iconHighlight.Set(item.icon);
