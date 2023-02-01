@@ -6,6 +6,7 @@ using UnityEngine;
 public class ToolBarController : MonoBehaviour
 {
     [SerializeField] int toolbarSize = 11;
+    [SerializeField] IconHighlight iconHighlight;
     int selectedTool;
 
     public Action<int> onChange;
@@ -18,9 +19,10 @@ public class ToolBarController : MonoBehaviour
         } 
     }
 
-    internal void Set(int id)
+    private void Start()
     {
-        selectedTool = id;
+        onChange += UpdateHighlightIcon;
+        UpdateHighlightIcon(selectedTool);
     }
 
     private void Update()
@@ -40,6 +42,21 @@ public class ToolBarController : MonoBehaviour
             }
             onChange?.Invoke(selectedTool);
             Debug.Log(selectedTool);
+        }
+    }
+    internal void Set(int id)
+    {
+        selectedTool = id;
+    }
+
+    private void UpdateHighlightIcon(int id)
+    {
+        Item item = GetItem;
+        
+        iconHighlight.Show =item.iconHighlight;
+        if(item.iconHighlight)
+        {
+            iconHighlight.Set(item.icon);
         }
     }
 }
