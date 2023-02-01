@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158d66f54e963a343b8da976a48fc02b, type: 3}
+  m_Name: Korb
+  m_EditorClassIdentifier: 
+  elements:
+  - item: {fileID: 11400000, guid: 8dedee0cfa18ca847a1750477b98728a, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: 5acfe3f274c226c4a8ca8c47a7356af5, type: 2}
+    count: 3
+  output:
+    item: {fileID: 11400000, guid: 10d50068e95f9164580258918537a106, type: 2}
+    count: 1

@@ -341,3 +341,108 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 10813.206228 seconds.
+  path: Assets/GameData/Crafting/Steinkeil 1.asset
+  artifactKey: Guid(54fd034609b56bc41be0c1941434c3d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Crafting/Steinkeil 1.asset using Guid(54fd034609b56bc41be0c1941434c3d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c213dcbb660c050f8f45a9b2064c307c') in 0.055687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.783291 seconds.
+  path: Assets/GameData/Crafting/Korb.asset
+  artifactKey: Guid(54fd034609b56bc41be0c1941434c3d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Crafting/Korb.asset using Guid(54fd034609b56bc41be0c1941434c3d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91b53a9f8b2a41487e7ce1df897e5d4c') in 0.009126 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.166605 seconds.
+  path: Assets/GameData/Items/Stick 1.asset
+  artifactKey: Guid(10d50068e95f9164580258918537a106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Items/Stick 1.asset using Guid(10d50068e95f9164580258918537a106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ad7bdf93ff2190341cd10e6eb49cc60') in 0.007043 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.113798 seconds.
+  path: Assets/GameData/Items/Korb.asset
+  artifactKey: Guid(10d50068e95f9164580258918537a106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Items/Korb.asset using Guid(10d50068e95f9164580258918537a106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48645d47b6ea38bdab63ddaa350c2dc1') in 0.006039 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.352638 seconds.
+  path: Assets/GameData/Crafting/Korb.asset
+  artifactKey: Guid(54fd034609b56bc41be0c1941434c3d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Crafting/Korb.asset using Guid(54fd034609b56bc41be0c1941434c3d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd22cc5a381566e60cdd0db076b796b28') in 0.008274 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 43.903794 seconds.
+  path: Assets/GameData/Crafting/Korb.asset
+  artifactKey: Guid(54fd034609b56bc41be0c1941434c3d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Crafting/Korb.asset using Guid(54fd034609b56bc41be0c1941434c3d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9afd2edc9945d98c23d47cd2d939ed9') in 0.008587 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 358.705220 seconds.
+  path: Assets/GameData/MetaData/Inventory 1.asset
+  artifactKey: Guid(e8e9d3f459a4d434ebb849b5e7802bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/MetaData/Inventory 1.asset using Guid(e8e9d3f459a4d434ebb849b5e7802bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a34b15eb9dfe46c6433a09e0d53ccaa6') in 0.049925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.817760 seconds.
+  path: Assets/GameData/Items/Korb.asset
+  artifactKey: Guid(10d50068e95f9164580258918537a106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Items/Korb.asset using Guid(10d50068e95f9164580258918537a106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd560a5da47220c24f8ac17bf7a579fc3') in 0.005343 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.037754 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\i-tur\Documents\GitHub\Farmail\Islonja\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\i-tur\Documents\GitHub\Farmail\Islonja\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.73 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.853 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2854ms)
+		BeginReloadAssembly (331ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (14ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (87ms)
+		EndReloadAssembly (2242ms)
+			LoadAssemblies (300ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (642ms)
+			ReleaseScriptCaches (5ms)
+			RebuildScriptCaches (145ms)
+			SetupLoadedEditorAssemblies (1044ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (29ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (223ms)
+				ProcessInitializeOnLoadAttributes (576ms)
+				ProcessInitializeOnLoadMethodAttributes (188ms)
+				AfterProcessingInitializeOnLoad (23ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 9.09 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5623 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 48 unused Assets / (0.8 MB). Loaded Objects now: 6306.
+Memory consumption went from 216.2 MB to 215.4 MB.
+Total: 8.914200 ms (FindLiveObjects: 0.686800 ms CreateObjectMapping: 0.504000 ms MarkObjects: 6.859700 ms  DeleteObjects: 0.861200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

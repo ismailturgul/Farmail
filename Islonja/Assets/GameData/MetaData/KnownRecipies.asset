@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   craftingRecipes:
   - {fileID: 11400000, guid: a2e61c80b6562484dac6aa200c61b7f5, type: 2}
+  - {fileID: 11400000, guid: 54fd034609b56bc41be0c1941434c3d4, type: 2}
