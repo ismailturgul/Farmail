@@ -46,7 +46,7 @@ public class Character_Interact_Controller : MonoBehaviour
         }
         if (colliders.Length > 0)
         {
-        highlight_Controller.Hide();
+            highlight_Controller.Hide();
 
         }
         

@@ -23,7 +23,7 @@ public class MusicManager : MonoBehaviour
 
     public void Play(AudioClip musicToPlay, bool interrupt = false)
     {
-        AudioClip playOnStart;
+        AudioClip switchTo;
 
         if (musicToPlay == null ) { return; }
 
@@ -35,9 +35,10 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
-            playOnStart = musicToPlay;
+            switchTo = musicToPlay;
             StartCoroutine(SmoothSwitchMusic());
         }
+        
         float volume;
         IEnumerator SmoothSwitchMusic()
         {
@@ -50,7 +51,7 @@ public class MusicManager : MonoBehaviour
                 audioSource.volume = volume;
                 yield return new WaitForEndOfFrame();
             }
-            Play(playOnStart, true);
+            Play(switchTo, true);
         }
     }
 }

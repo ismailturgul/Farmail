@@ -2200,7 +2200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSourcePrefab: {fileID: 5315456586345385662, guid: 0930cc3621d8b574f8fde185207f8889, type: 3}
-  audioSourceCount: 2
+  audioSourceCount: 10
 --- !u!224 &518976341 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6194670712856195230, guid: 7a9e2da7c0b28ab4bb8745a637b76f7f, type: 3}

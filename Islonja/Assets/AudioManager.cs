@@ -26,7 +26,8 @@ public class AudioManager : MonoBehaviour
     private void Init()
     {
         audioSources = new List<AudioSource>();
-        for (int i = 0; i < audioSources.Count; i++)
+
+        for (int i = 0; i < audioSourceCount; i++)
         {
             GameObject go = Instantiate(audioSourcePrefab,transform);
             go.transform.localPosition = Vector3.zero;
@@ -40,11 +41,12 @@ public class AudioManager : MonoBehaviour
 
         audioSource.clip = audioClip;
         audioSource.Play();
+        
     }
 
     private AudioSource GetFreeAudioSource()
     {
-        for (int i = 0; i < audioSources.Count; i++) 
+        for (int i = 0; i < audioSourceCount; i++) 
         {
             if (audioSources[i].isPlaying == false)
             {
