@@ -1,18 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaceableObjectContainer : MonoBehaviour
+[Serializable]
+public class PlaceableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Item placeItem;
+    public Transform targetObject;
+    public Vector3Int positionOnGrid;
+}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+[CreateAssetMenu(menuName ="Data/Placeable Objects Container")]
+public class PlaceableObjectContainer : ScriptableObject
+{
+
+    public List<PlaceableObject> placeableObjects;
+
 }
