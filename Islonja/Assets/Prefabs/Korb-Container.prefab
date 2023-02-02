@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -1351069620, guid: 9ad4580c6f3faa24a8fa78b8f60fb7e6, type: 3}
+  m_Sprite: {fileID: -404133522, guid: 7bab45113c1e39f43ae014b7e9cf6109, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -160,7 +160,8 @@ MonoBehaviour:
   closed_Chest: {fileID: 763837638280722467}
   opened_Chest: {fileID: 763837637783228515}
   opened: 0
-  onOpenAudio: {fileID: 8300000, guid: 19832bd6b7660fd4cb22e9703dd042ed, type: 3}
+  onOpenAudio: {fileID: 8300000, guid: 3794b5104e9d1c5429c1a71049e5df8f, type: 3}
+  itemContainer: {fileID: 11400000, guid: 5000db781a70d664e9623195c0d85c5b, type: 2}
 --- !u!1 &763837638280722467
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763837638280722467}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.203, y: -0.267, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -234,7 +235,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 2127517240, guid: 9ad4580c6f3faa24a8fa78b8f60fb7e6, type: 3}
+  m_Sprite: {fileID: -272268849, guid: 7bab45113c1e39f43ae014b7e9cf6109, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
