@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class Loot_Container_Interact : Interactable
 {
@@ -14,23 +15,35 @@ public class Loot_Container_Interact : Interactable
     {
         if (opened == false)
         {
-            opened = true;
-            closed_Chest.SetActive(false);
-            opened_Chest.SetActive(true);
-
-
-            AudioManager.instance.Play(onOpenAudio);
-            charachter.GetComponent<ItemContainerInteractController>().Open(itemContainer);
-        }
+            Open(charachter);
+                  }
         else
         {
-            opened = false;
-            closed_Chest.SetActive(true);
-            opened_Chest.SetActive(false);
-
-
-            AudioManager.instance.Play(onOpenAudio);
-            charachter.GetComponent<ItemContainerInteractController>().Close();
+            Close(charachter);
         }
+    }
+
+    public void Open(Character charachter)
+    {
+        opened = true;
+        closed_Chest.SetActive(false);
+        opened_Chest.SetActive(true);
+
+
+        AudioManager.instance.Play(onOpenAudio);
+        charachter.GetComponent<ItemContainerInteractController>().Open(itemContainer, transform);
+
+    }
+
+    public void Close(Character charachter)
+    {
+        opened = false;
+        closed_Chest.SetActive(true);
+        opened_Chest.SetActive(false);
+
+
+        AudioManager.instance.Play(onOpenAudio);
+        charachter.GetComponent<ItemContainerInteractController>().Close();
+
     }
 }

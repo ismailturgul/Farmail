@@ -1165,6 +1165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   containerPanel: {fileID: 993526522}
+  maxDistance: 2.5
 --- !u!1001 &213749317
 PrefabInstance:
   m_ObjectHideFlags: 0
