@@ -16,4 +16,5 @@ public class GameManager : MonoBehaviour
     public ItemDragAndDropController dragAndDropController;
     public Day_Time_Controller timeController;
     public DialogueSystem dialogueSystem;
+    public PlaceableObjectsReferenceManager placeableObjectsReferenceManager;
 }

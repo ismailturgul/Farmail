@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 939194317, guid: 98b8c886fc233ec4b92225fb67664fc0, type: 3}
+  m_Sprite: {fileID: -1351069620, guid: 9ad4580c6f3faa24a8fa78b8f60fb7e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -160,6 +160,7 @@ MonoBehaviour:
   closed_Chest: {fileID: 763837638280722467}
   opened_Chest: {fileID: 763837637783228515}
   opened: 0
+  onOpenAudio: {fileID: 8300000, guid: 19832bd6b7660fd4cb22e9703dd042ed, type: 3}
 --- !u!1 &763837638280722467
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +234,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -1462853851, guid: 5cac3d267eb4bb941af2f518af53ebb8, type: 3}
+  m_Sprite: {fileID: 2127517240, guid: 9ad4580c6f3faa24a8fa78b8f60fb7e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
