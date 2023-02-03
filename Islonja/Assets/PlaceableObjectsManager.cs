@@ -8,7 +8,7 @@ using static UnityEditor.Progress;
 public class PlaceableObjectsManager : MonoBehaviour
 {
 
-    [SerializeField] PlaceableObjectContainer placeableObject;
+    [SerializeField] PlaceableObjectContainer placeableObjects;
     [SerializeField] Tilemap targetTilemap;
 
     private void Start()
@@ -18,17 +18,17 @@ public class PlaceableObjectsManager : MonoBehaviour
     }
     private void OnDestroy()
     {
-        for (int i = 0; i < placeableObject.placeableObjects.Count; i++)
+        for (int i = 0; i < placeableObjects.placeableObjects.Count; i++)
         {
-            placeableObject.placeableObjects[i].targetObject = null;
+            placeableObjects.placeableObjects[i].targetObject = null;
         }
     }
 
     private void VisualizeMap()
     {
-        for(int i = 0; i < placeableObject.placeableObjects.Count; i++)
+        for(int i = 0; i < placeableObjects.placeableObjects.Count; i++)
         {
-            VisualizeItem(placeableObject.placeableObjects[i]);
+            VisualizeItem(placeableObjects.placeableObjects[i]);
         }
     }
 
@@ -50,6 +50,6 @@ public class PlaceableObjectsManager : MonoBehaviour
     {
         PlaceableObject placeableObject = new PlaceableObject(item, positionOnGrid);
         VisualizeItem(placeableObject);
-        placeableObject.placeableObjects.Add(placeableObject);
+        placeableObjects.placeableObjects.Add(placeableObject);
     }
 }
