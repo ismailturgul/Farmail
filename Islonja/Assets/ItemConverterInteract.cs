@@ -15,9 +15,12 @@ public class ItemConverterInteract : Interactable
     [SerializeField] float timeToProcess = 5f;
     float timer;
 
+    Animator animator;
+
     private void Start()
     {
         itemSlot = new ItemSlot();
+        animator = GetComponent<Animator>();
     }
 
     public override void Interact(Character character)
@@ -39,6 +42,7 @@ public class ItemConverterInteract : Interactable
 
     private void StartItemProcessing()
     {
+        animator.SetBool("Working", true);
         itemSlot.Copy(GameManager.instance.dragAndDropController.itemSlot);
         GameManager.instance.dragAndDropController.RemoveItem();
 
@@ -61,6 +65,7 @@ public class ItemConverterInteract : Interactable
 
     private void CompleteItemConversion()
     {
+        animator.SetBool("Working", false);
         itemSlot.Clear();
         itemSlot.Set(producedItem, producedItemCount);
     }
