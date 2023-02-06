@@ -8,17 +8,32 @@ public class ItemConverterInteract : Interactable
 
     [SerializeField] Item convertableItem;
     [SerializeField] Item producedItem;
+    [SerializeField] int producedItemCount = 1;
 
     ItemSlot itemSlot;
 
     [SerializeField] float timeToProcess = 5f;
     float timer;
 
+    private void Start()
+    {
+        itemSlot = new ItemSlot();
+    }
+
     public override void Interact(Character character)
     {
-        if(GameManager.instance.dragAndDropController.Check(convertableItem))
+        if(itemSlot.item == null)
+        { 
+            if(GameManager.instance.dragAndDropController.Check(convertableItem))
+            {
+                StartItemProcessing();
+            }
+        }
+
+        if(itemSlot.item != null && timer < 0f)
         {
-            StartItemProcessing();
+            GameManager.instance.inventoryContainer.Add(itemSlot.item, itemSlot.count);
+            itemSlot.Clear();
         }
     }
 
@@ -27,7 +42,7 @@ public class ItemConverterInteract : Interactable
         itemSlot.Copy(GameManager.instance.dragAndDropController.itemSlot);
         GameManager.instance.dragAndDropController.RemoveItem();
 
-        timer = 0f;
+        timer = timeToProcess;
     }
 
 
@@ -39,8 +54,14 @@ public class ItemConverterInteract : Interactable
             timer -= Time.deltaTime;
             if(timer < 0f)
             {
-                Debug.Log("Finishing the process");
+                CompleteItemConversion();
             }
         }
+    }
+
+    private void CompleteItemConversion()
+    {
+        itemSlot.Clear();
+        itemSlot.Set(producedItem, producedItemCount);
     }
 }
