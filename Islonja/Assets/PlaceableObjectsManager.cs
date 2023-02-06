@@ -46,8 +46,14 @@ public class PlaceableObjectsManager : MonoBehaviour
         placeableObject.targetObject = go.transform;
     }
 
+    public bool Check(Vector3Int position)
+    {
+        return placeableObjects.Get(position) != null;
+    }
+
     public void Place(Item item, Vector3Int positionOnGrid)
     {
+        if(Check(positionOnGrid) == true) { return; }
         PlaceableObject placeableObject = new PlaceableObject(item, positionOnGrid);
         VisualizeItem(placeableObject);
         placeableObjects.placeableObjects.Add(placeableObject);

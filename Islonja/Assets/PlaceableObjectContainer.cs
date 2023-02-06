@@ -23,4 +23,8 @@ public class PlaceableObjectContainer : ScriptableObject
 
     public List<PlaceableObject> placeableObjects;
 
+    internal PlaceableObject Get(Vector3Int position)
+    {
+        return placeableObjects.Find(x => x.positionOnGrid == position);
+    }
 }
