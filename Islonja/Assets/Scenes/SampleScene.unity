@@ -10645,6 +10645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1598933444}
   - component: {fileID: 1598933443}
+  - component: {fileID: 1598933445}
   m_Layer: 0
   m_Name: Smelter
   m_TagString: Untagged
@@ -10665,7 +10666,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.009971559, y: -1.362607}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -10676,7 +10677,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 1.9149944, y: 1.2867451}
   m_EdgeRadius: 0
 --- !u!4 &1598933444
 Transform:
@@ -10694,6 +10695,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598933445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598933442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88987c1bfa5996d45852915192ca8be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  convertableItem: {fileID: 11400000, guid: 03d7007b77bed954b96269a1bb431bd6, type: 2}
+  producedItem: {fileID: 11400000, guid: 5f23328bd1a9f69489140082576b6fb3, type: 2}
+  producedItemCount: 1
+  timeToProcess: 5
 --- !u!1001 &1613652336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11340,6 +11357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2108666389}
   - component: {fileID: 2108666390}
+  - component: {fileID: 2108666391}
   m_Layer: 0
   m_Name: SmelterSprite
   m_TagString: Untagged
@@ -11414,6 +11432,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2108666391
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108666388}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.008110702, y: -1.3593998}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 4}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9188925, y: 1.2812004}
+  m_EdgeRadius: 0
 --- !u!1001 &2132763373
 PrefabInstance:
   m_ObjectHideFlags: 0
