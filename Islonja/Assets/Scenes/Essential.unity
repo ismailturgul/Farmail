@@ -11312,7 +11312,7 @@ MonoBehaviour:
   dragAndDropController: {fileID: 1841313372}
   timeController: {fileID: 1841313371}
   dialogueSystem: {fileID: 1358033346}
-  placeableObjectsReferenceManager: {fileID: 0}
+  placeableObjectsReferenceManager: {fileID: 1841313377}
 --- !u!4 &1841313369
 Transform:
   m_ObjectHideFlags: 0
