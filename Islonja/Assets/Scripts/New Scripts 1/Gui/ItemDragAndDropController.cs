@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ItemDragAndDropController : MonoBehaviour
 {
-    [SerializeField] ItemSlot itemSlot;
+    public ItemSlot itemSlot;
     [SerializeField] GameObject itemIcon;
     RectTransform iconTransform;
     Image itemIconImage;
@@ -45,6 +45,18 @@ public class ItemDragAndDropController : MonoBehaviour
         }
     }
 
+    public bool Check(Item item, int count = 1)
+    {
+        if (itemSlot == null) { return false; }
+
+        if (item.stackable)
+        {
+            return itemSlot.item == item && itemSlot.count >= count;
+        }
+
+        return itemSlot.item == item;
+    }
+
     internal void OnClick(ItemSlot itemSlot)
     {
         if(this.itemSlot.item == null)
@@ -74,5 +86,24 @@ public class ItemDragAndDropController : MonoBehaviour
             itemIcon.SetActive(true);
             itemIconImage.sprite = itemSlot.item.icon;
         }
+    }
+
+    internal void RemoveItem(int count = 1)
+    {
+        if(itemSlot == null) { return; }
+
+        if(itemSlot.item.stackable)
+        {
+            itemSlot.count -= count;
+            if(itemSlot.count <= 0)
+            {
+                itemSlot.Clear();
+            }
+        }
+        else
+        {
+            itemSlot.Clear();
+        }
+        UpdateIcon();
     }
 }

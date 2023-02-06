@@ -27,4 +27,9 @@ public class PlaceableObjectContainer : ScriptableObject
     {
         return placeableObjects.Find(x => x.positionOnGrid == position);
     }
+
+    internal void Remove(PlaceableObject placedObject)
+    {
+        placeableObjects.Remove(placedObject);
+    }
 }

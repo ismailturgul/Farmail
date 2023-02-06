@@ -31,6 +31,23 @@ public class PlaceableObjectsManager : MonoBehaviour
             VisualizeItem(placeableObjects.placeableObjects[i]);
         }
     }
+    internal void PickUp(Vector3Int gridPosition)
+    {
+        PlaceableObject placedObject = placeableObjects.Get(gridPosition);
+
+        if(placedObject == null)
+        {
+            return;
+        }
+        ItemSpawnManager.instance.SpawnItem(targetTilemap.CellToWorld(gridPosition),
+            placedObject.placeItem,
+            1
+            );
+
+        Destroy(placedObject.targetObject.gameObject);
+
+        placeableObjects.Remove(placedObject);
+    }
 
     private void VisualizeItem(PlaceableObject placeableObject)
     {
@@ -58,4 +75,5 @@ public class PlaceableObjectsManager : MonoBehaviour
         VisualizeItem(placeableObject);
         placeableObjects.placeableObjects.Add(placeableObject);
     }
+
 }
